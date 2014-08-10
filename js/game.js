@@ -166,7 +166,7 @@ function selectA(selectPlace){
 		var select1=document.getElementById(nowSelect);
 		select1.style.backgroundColor="#ffb098";
 		nowSelect=null;
-		alert('選択解除１');
+		//alert('選択解除１');
 		//ret
 		return;
 	}
@@ -175,7 +175,7 @@ function selectA(selectPlace){
 		var select1=document.getElementById(nowSelect2);
 		select1.style.backgroundColor="#ffb098";
 		nowSelect2=null;
-		alert('選択解除２');
+		//alert('選択解除２');
 		//ret
 		return;
 	}
@@ -185,11 +185,11 @@ function selectA(selectPlace){
 	//未選択のボタン
 	if(nowSelect==null){
 		nowSelect=selectPlace;
-		alert('新たに1に登録');
+		//alert('新たに1に登録');
 	}
 	else if(nowSelect2==null){
 		nowSelect2=selectPlace;
-		alert('新たに２に登録');
+		//alert('新たに２に登録');
 
 	}
 	var select=document.getElementById(selectPlace);
