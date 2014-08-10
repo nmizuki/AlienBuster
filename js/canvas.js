@@ -1,83 +1,73 @@
 //宇宙人の画像をcanvasに設定
-function init() {
-  var canvas = document.getElementById('game');
-  var ctx = canvas.getContext('2d');
-  draw(ctx);
-}
+// function init() {
+//   var canvas = document.getElementById('game');
+//   var ctx = canvas.getContext('2d');
+//   draw(ctx);
+// }
 
+window.addEventListener("load", function () {
 
-$(function(){
-  if(!canvas || !canvas.getContext) return false;
-  var ctx = canvas.getContext('2d');
-  var startX,
-    startY,
-    x,
-    y,
-    borderWidth = 5,
-    isDrawing = false;
+  // 必要な変数を宣言しておく
+  var canvas = document.getElementById("game");
+  var c = canvas.getContext("2d");
+  var w = 450;
+  var h = 400;
+  var drawing = false;
+  var oldPos;
 
-    var canvas_info = canvas.getBoundingClientRect();
-      canvas.width = canvas_info.width;
-      canvas.height = canvas_info.height;
-      var canvas_x = canvas_info.left;
-      var canvas_y = canvas_info.top;
-      var canvas_width = canvas_info.width;
-      var canvas_height = canvas_info.height;
+  // CanvasとContextを初期化する
+  canvas.width = w;
+  canvas.height = h;
+  c.strokeStyle = "#000000";
+  c.lineWidth = 5;
+  c.lineJoin = "round";
+  c.lineCap = "round";
 
-  $('#game').touchstart(function(e){
-    isDrawing = true;
-    startX = e.pageX;
-    startY = e.pageY- canvas_y;
-  });
+  // タップ開始時に、絵を描く準備をする
+  canvas.addEventListener("touchstart", function (event) {
+    drawing = true;
+    oldPos = getPosT(event);
+  }, false);
 
-  $('#game').touchmove(function(e){
-    if(!isDrawing) return;
-    x = e.pageX - $(this).offset().left - borderWidth;
-    y = e.pageY - $(this).offset().top - borderWidth;
-    ctx.beginPath();
-    ctx.moveTo(startX,startY);
-    ctx.lineTo(x,y);
-    ctx.stroke();
-    startX = x;
-    startY = y;
-  });
+  // タップ終了時に、絵を描く後処理を行う
+  canvas.addEventListener("touchend", function () {
+    drawing = false;
+  }, false);
 
-  $('#game').touchend(function(){
-    isDrawing = false;
-  });
+  // gestureイベント（２本指以上で触ると発生するやつ）の
+  // 終了時にも絵を描く後処理を行う
+  canvas.addEventListener("gestureend", function () {
+    console.log("mouseout");
+    drawing = false;
+  }, false);
 
-  $('#game').touchleave(function(){
-    isDrawing = false;
-  });
+  // 実際に絵を描く処理
+  // 前回に保存した位置から現在の位置迄線を引く
+  canvas.addEventListener("touchmove", function (event) {
+    var pos = getPosT(event);
+    if (drawing) {
+      c.beginPath();
+      c.moveTo(oldPos.x, oldPos.y);
+      c.lineTo(pos.x, pos.y);
+      c.stroke();
+      c.closePath();
+      oldPos = pos;
+    }
+  }, false);
 
-  $('#hc').change(function(){
-    ctx.strokeStyle = "red";
-  });
-  $('#penWidth').change(function(){
-    ctx.lineWidth = $(this).val();
-  });
-
-  $('#erase').click(function(){
-    if(!confirm('本当に消去しますか？'))return;
-    ctx.clearRect(0,0,canvas.width,canvas.height);
-  });
-
-  $('#save').click(function(){
-    var img = $('<img>').attr({
-      width: 100,
-      height: 50,
-      src: canvas.toDataURL()
-    });
-    var link = $('<a>').attr({
-      href:canvas.toDataURL().replace('image/png',
-      'application/octet-stream'),
-      download: new Date().getTime() + '.png'
-    });
-    $('#gallery').append(link.append(img.addClass('thumbnail')));
-    ctx.clearRect(0,0,canvas.width,canvas.height);
-  });
+  // タップ位置を取得する為の関数群
+  function scrollX(){return document.documentElement.scrollLeft || document.body.scrollLeft;}
+  function scrollY(){return document.documentElement.scrollTop || document.body.scrollTop;}
+  function getPosT (event) {
+    var mouseX = event.touches[0].clientX - $(canvas).position().left + scrollX();
+    var mouseY = event.touches[0].clientY - $(canvas).position().top + scrollY();
+    return {x:mouseX, y:mouseY};
+  }
 
   function stopDefault(event) {
+    if (event.touches[0].target.tagName.toLowerCase() == "li") {return;}
+    if (event.touches[0].target.tagName.toLowerCase() == "input") {return;}
+
     event.preventDefault();
   }
 
@@ -90,8 +80,86 @@ $(function(){
   document.addEventListener("gesturechange", stopDefault, false);
   document.addEventListener("gestureend", stopDefault, false);
 
+}, false);
 
-});
+
+
+
+// $(function(){
+//   if(!canvas || !canvas.getContext) return false;
+//   var ctx = canvas.getContext('2d');
+//   var startX,
+//       startY,
+//       x,
+//       y,
+//       borderWidth = 5,
+//       isDrawing = false,
+//       oldPos;
+//
+//     var canvas_info = canvas.getBoundingClientRect();
+//       canvas.width = canvas_info.width;
+//       canvas.height = canvas_info.height;
+//       var canvas_x = canvas_info.left;
+//       var canvas_y = canvas_info.top;
+//       var canvas_width = canvas_info.width;
+//       var canvas_height = canvas_info.height;
+//
+//   $('#game').touchstart(function(event){
+//     isDrawing = true;
+//     startX = event.pageX;
+//     startY = event.pageY- canvas_y;
+//   });
+//
+//   $('#game').touchmove(function(event){
+//     if(!isDrawing) return;
+//     var pos = getPosT(event);
+//     canvas.beginPath();
+//     canvas.moveTo(oldPos.x, oldPos.y);
+//     canvas.lineTo(pos.x, pos.y);
+//     canvas.stroke();
+//     canvas.closePath();
+//     oldPos = pos;
+//   });
+//
+//   $('#game').touchend(function(){
+//     isDrawing = false;
+//   });
+//
+//   $('#game').touchleave(function(){
+//     isDrawing = false;
+//   });
+//
+//   $('#hc').change(function(){
+//     ctx.strokeStyle = "red";
+//   });
+//   $('#penWidth').change(function(){
+//     ctx.lineWidth = $(this).val();
+//   });
+//
+//    // タップ位置を取得する為の関数群
+//   function scrollX(){return document.documentElement.scrollLeft || document.body.scrollLeft;}
+//   function scrollY(){return document.documentElement.scrollTop || document.body.scrollTop;}
+//   function getPosT (event) {
+//     var canvas_x = event.touches[0].clientX - $(canvas).position().left + scrollX();
+//     var canvas_y = event.touches[0].clientY - $(canvas).position().top + scrollY();
+//     return {x:canvas_x, y:canvas_y};
+//   }
+//
+//   function stopDefault(event) {
+//     event.preventDefault();
+//   }
+//
+//   // タッチイベントの初期化
+//   document.addEventListener("touchstart", stopDefault, false);
+//   document.addEventListener("touchmove", stopDefault, false);
+//   document.addEventListener("touchend", stopDefault, false);
+//   // ジェスチャーイベントの初期化
+//   document.addEventListener("gesturestart", stopDefault, false);
+//   document.addEventListener("gesturechange", stopDefault, false);
+//   document.addEventListener("gestureend", stopDefault, false);
+//
+//
+// });
 
 
 
