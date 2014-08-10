@@ -1,4 +1,3 @@
-
 var canvas=document.getElementById('game');
 //console.log(canvas);
 var ctx=canvas.getContext('2d');
@@ -39,6 +38,7 @@ var items=new Array();
 //アイテムオブジェクトを配列に格納
 items[0].name="醤油";
 items[0].damage="20";
+
 items[1].name="洗剤";
 items[1].damage="20";
 items[2].name="水";
