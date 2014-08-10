@@ -5,8 +5,6 @@ var ctx = canvas.getContext('2d');
 
 //宇宙人の画像をcanvasに設定
 function init() {
-  var canvas = document.getElementById("game");
-  var ctx = canvas.getContext("2d");
   draw(ctx)
 }
 
