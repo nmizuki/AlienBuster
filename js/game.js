@@ -120,15 +120,8 @@ function setItem(itemPlace){
 			break;
 		}
 	}
-<<<<<<< HEAD
-
-	//buttonのvalue値を描き替え
-	var itemA=document.getElementById(itemPlace );
-=======
-
 	//bottonのvalue値を描き替え
 	var itemA=document.getElementById(itemPlace);
->>>>>>> koide
 	itemA.value=items[num1].name;
 
 	//表示中アイテムに登録(アイテム配列の添え字)
