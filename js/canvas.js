@@ -1,9 +1,9 @@
 //宇宙人の画像をcanvasに設定
-// function init() {
-//   var canvas = document.getElementById('game');
-//   var ctx = canvas.getContext('2d');
-//   draw(ctx);
-// }
+function init() {
+  var canvas = document.getElementById('game');
+  var ctx = canvas.getContext('2d');
+  draw(ctx);
+}
 
 window.addEventListener("load", function () {
 
@@ -15,11 +15,14 @@ window.addEventListener("load", function () {
   var drawing = false;
   var oldPos;
 
+  // 絵の描画
+  draw(c);
+
   // CanvasとContextを初期化する
   canvas.width = w;
   canvas.height = h;
   c.strokeStyle = "#000000";
-  c.lineWidth = 5;
+  c.lineWidth = 7;
   c.lineJoin = "round";
   c.lineCap = "round";
 
@@ -65,9 +68,6 @@ window.addEventListener("load", function () {
   }
 
   function stopDefault(event) {
-    if (event.touches[0].target.tagName.toLowerCase() == "li") {return;}
-    if (event.touches[0].target.tagName.toLowerCase() == "input") {return;}
-
     event.preventDefault();
   }
 

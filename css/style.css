@@ -54,6 +54,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+.active {
+  background-color: #ff6f56 !important;
+  border: solid #ff3b19 1px !important;
+}
+
 html, body {
   height: 100%;
   overflow: hidden;
@@ -169,6 +174,7 @@ html, body {
   border-radius: 3px;
   border: solid 1px #ff5d2d;
   background-color: #ffb098;
+  cursor: pointer;
 }
 #wrapper #buttons ul li:nth-child(even) {
   margin-left: 4%;
