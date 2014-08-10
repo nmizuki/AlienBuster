@@ -1,43 +1,85 @@
 <!doctype html>
+
 <html lang="ja">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta http-equiv="Content-Style-Type" content="text/css" />
+
   <meta http-equiv="Content-Script-Type" content="text/javascript" />
+
   <meta name="viewport" content="width=device-width initial-scale=1.0" />
+
   <title>宇宙人バスターズ</title>
+
   <link rel='stylesheet' href='css/style.css' />
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
   <script src="js/canvas.js"></script>
+
 </head>
 
-<body onLoad="getItem();">
+<body onLoad="getItem();init();">
+
   <div id="wrapper">
+
     <div id="enemyStatus">
+
       <p>
+
         <img src='img/hp.png' id="hp" width='180px' height='40px'>
+
         <progress value="100" max="100" id="alienhpTag"></progress>
+
       </p>
+
     </div>
+
 	<canvas id="game">
+
 		Canvasに対応したブラウザを用意して下さい
+
 	</canvas>
+
+  <div id="timer">10</div>
+
     <form id="buttons">
+
       <input type="hidden" id="hc" value="">
+
       <ul>
-        <li><input type="button" value="" onclick="" class="click" id="item1"></li>
-        <li><input type="button" value="" onclick="" class="click" id="item2"></li>
-        <li><input type="button" value="" onclick="" class="click" id="item3"></li>
-        <li><input type="button" value="" onclick="" class="click" id="item4"></li>
+
+        <li><input type="button" value="" onclick="clickCard('item1');return false;" class="click" id="item1"></li>
+
+        <li><input type="button" value="" onclick="clickCard('item2');return false;" class="click" id="item2"></li>
+
+        <li><input type="button" value="" onclick="clickCard('item3');return false;" class="click" id="item3"></li>
+
+        <li><input type="button" value="" onclick="clickCard('item4');return false;" class="click" id="item4"></li>
+
       </ul>
+
     </form>
+
     <div id="myStatus">
+
       <p>
+
         <img src='img/myhp.png' id="myhp" width='180px' height='40px'>
+
         <progress value="100" max="100" id="myhpTag"></progress>
+
       </p>
+
     </div>
+
   </div>
+
 <script src='js/game.js'></script>
+
 </body>
+
 </html>
