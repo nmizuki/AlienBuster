@@ -71,16 +71,31 @@ function getItem(){
 
 ////アイテム1つランダムで、itemPlaceで指定したボタンにセット//////////
 function setItem(itemPlace){
-	var num1=Math.random();
-	num1=Math.floor((num1*(itemNum-1))+1);
-	console.log(num1);
+	var newFlag=false;
+	while(true){
+		var num1=Math.random();
+		num1=Math.floor((num1*(itemNum-1))+1);
+		console.log(num1);
 
-	//既に入っていないかチェック
-		for(var i=0;i<5;i++){
+		//既に入っていないかチェック
+		for(var i=0;i<4;i++){
 			//既存
 			if(displayItems[i]==num1){
+				break;
 			}
+			
+			//既存なし
+			else if(i>=3){
+				//alert("既存なし");
+				newFlag=true;
+			}
+			
 		}
+		
+		if(newFlag==true){
+			break;
+		}
+	}
 	
 	//buttonのvalue値を描き替え
 	var itemA=document.getElementById(itemPlace );
@@ -89,18 +104,22 @@ function setItem(itemPlace){
 	//表示中アイテムに登録(アイテム配列の添え字)
 	switch(itemPlace){
 		case 'item1':
-			displayItems[1]=num1;
+			displayItems[0]=num1;
 			break;
 		case 'item2':
-			displayItems[2]=num1;
+			displayItems[1]=num1;
 			break;
 		case 'item3':
-			displayItems[3]=num1;
+			displayItems[2]=num1;
 			break;
 		case 'item4':
-			displayItems[4]=num1;
+			displayItems[3]=num1;
 			break;
 	
+	}
+	
+	for(var i=0;i<4;i++){
+		console.log(i+'個めは'+displayItems[i]);
 	}
 }		
 
@@ -112,7 +131,7 @@ function setItem(itemPlace){
 /////選択中アイテムは青色に/////////
 function selectA(selectPlace){
 	nowSelect=selectPlace;
-	console.log(nowSelect);
+//	console.log(nowSelect);
 	var select=document.getElementById(selectPlace);
 	select.style.backgroundColor="blue";
 
@@ -123,7 +142,7 @@ function selectA(selectPlace){
 //canvas上のマウスアップで操作終了とみなす（仮）
 function mouseUpListner(e) {
 	var select1=document.getElementById(nowSelect);
-	console.log(nowSelect);
+//	console.log(nowSelect);
 	
 	//青色解除
 	select1.style.backgroundColor="white";
@@ -133,13 +152,6 @@ function mouseUpListner(e) {
 
 	//選択中アイテムリセット
 	nowSelect=null;
-	console.log(nowSelect);
+//	console.log(nowSelect);
 	
-}
-
-/////
-	function up(){
-		var select=document.getElementById(selectPlace);
-		select.style.backgroundColor="blue";
-
 }
