@@ -19,6 +19,9 @@ imageObj.onload = function() {
 ////////アイテムたち//////配列に/////
 
 //アイテムオブジェクト
+/////////名前
+/////////ダメージ数
+
 function Cell() {
 	this.name = null;
 	this.damage=0;
@@ -53,6 +56,7 @@ items[7].damage="10";
 items[8].name="海苔";
 items[8].damage="10";
 
+alert(items[8].damage);
 
 //////表示中アイテム///
 var displayItems=new Array(4);
