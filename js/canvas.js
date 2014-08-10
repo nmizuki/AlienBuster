@@ -1,3 +1,4 @@
+
 //宇宙人の画像をcanvasに設定
 function init() {
   var canvas = document.getElementById('game');
@@ -5,7 +6,7 @@ function init() {
   draw(ctx);
 }
 
-window.addEventListener("load", function () {
+$(function(){
 
   // 必要な変数を宣言しておく
   var canvas = document.getElementById("game");
@@ -21,7 +22,13 @@ window.addEventListener("load", function () {
   // CanvasとContextを初期化する
   canvas.width = w;
   canvas.height = h;
-  c.strokeStyle = "#000000";
+  c.strokeStyle = "#3c3c3c";
+
+  var color = $("#hc").val();
+  if (color != undefined) {
+    c.strokeStyle = color;
+  }
+
   c.lineWidth = 7;
   c.lineJoin = "round";
   c.lineCap = "round";
@@ -80,9 +87,7 @@ window.addEventListener("load", function () {
   document.addEventListener("gesturechange", stopDefault, false);
   document.addEventListener("gestureend", stopDefault, false);
 
-}, false);
-
-
+});
 
 
 // $(function(){

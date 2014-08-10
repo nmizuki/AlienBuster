@@ -151,13 +151,13 @@ function setItem(itemPlace){
 /////選択中アイテムは青色に/////////
 $(function(){
 	// inputがクリックされた時の処理
-  $("#buttons ul li input").click(function(){
+  $(".click").on("click", function(){
 		// クリックされたオブジェクトのIdとClassを取得
 		var thisId = $(this).attr("id");
 		var thisClass = $(this).attr("class");
 
 		// クラスがあるかどうか
-		if(thisClass == undefined || thisClass == ""){
+		if(thisClass == undefined || thisClass == "click"){
 			// なかった場合
 			// Class active をセット
 			$(this).addClass("active");
@@ -187,7 +187,6 @@ $(function(){
 				console.log("aaa");
 				mouseUpListner(thisId);
 			});
-			// canvas.addEventListener('mouseup', mouseUpListner, false);
 
 		} else {
 			// ある場合
@@ -234,7 +233,7 @@ function mouseUpListner(thisId) {
 
 
 
-	//青色解除
+	//選択解除
 	$(function(){
   	$("#buttons ul li input").removeClass("active");
 	});
