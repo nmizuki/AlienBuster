@@ -550,4 +550,18 @@ $(function(){
     ctx.clearRect(0,0,canvas.width,canvas.height);
   });
 
+  function stopDefault(event) {
+    event.preventDefault();
+  }
+
+  // タッチイベントの初期化
+  document.addEventListener("touchstart", stopDefault, false);
+  document.addEventListener("touchmove", stopDefault, false);
+  document.addEventListener("touchend", stopDefault, false);
+  // ジェスチャーイベントの初期化
+  document.addEventListener("gesturestart", stopDefault, false);
+  document.addEventListener("gesturechange", stopDefault, false);
+  document.addEventListener("gestureend", stopDefault, false);
+
+
 });
