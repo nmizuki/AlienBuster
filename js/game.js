@@ -192,6 +192,10 @@ function selectA(selectPlace){
 		//alert('新たに２に登録');
 
 	}
+	
+	else{
+		return;
+	}
 	var select=document.getElementById(selectPlace);
 	select.style.backgroundColor="blue";
 	
@@ -246,31 +250,77 @@ function mouseDownListner(e) {
 
 }
 
+
 //canvas上のマウスアップで操作終了とみなす（仮）
 function mouseUpListner(e) {
-	var select1=document.getElementById(nowSelect);
+	if(nowSelect!=null){
+		var select1=document.getElementById(nowSelect);
+	}
+
+	if(nowSelect2!=null){
+		var select2=document.getElementById(nowSelect2);
+	}
+	
+//	var select1=document.getElementById(nowSelect);
 //	console.log(nowSelect);
+
 
 	//攻撃
 		//display配列の添字を取得
 		var damageIndex;
-		switch(nowSelect){
-			case 'item1':
-				damageIndex=displayItems[0];
-				break;
-			case 'item2':
-				damageIndex=displayItems[1];
-				break;
-			case 'item3':
-				damageIndex=displayItems[2];
-				break;
-			case 'item4':
-				damageIndex=displayItems[3];
-				break;
+		var damageIndex2;
+		var damageValue;
+		
+	
+		//１だけ
+		if(nowSelect!=null && nowSelect2==null){
+				switch(nowSelect){
+				case 'item1':
+					damageIndex=displayItems[0];
+					break;
+				case 'item2':
+					damageIndex=displayItems[1];
+					break;
+				case 'item3':
+					damageIndex=displayItems[2];
+					break;
+				case 'item4':
+					damageIndex=displayItems[3];
+					break;
+				}
+			
+			damageValue=items[damageIndex].damage;
+
 		}
 		
-		var damageValue=items[damageIndex].damage;
-		ctx.font = "10pt Arial";
+		//２だけ
+		else if(nowSelect==null && nowSelect2!=null){
+				switch(nowSelect2){
+				case 'item1':
+					damageIndex=displayItems[0];
+					break;
+				case 'item2':
+					damageIndex=displayItems[1];
+					break;
+				case 'item3':
+					damageIndex=displayItems[2];
+					break;
+				case 'item4':
+					damageIndex=displayItems[3];
+					break;
+				}
+			
+			damageValue=items[damageIndex].damage;
+
+		}
+		
+		//2つ選択
+		else if(nowSelect!=null && nowSelect2!=null){
+				
+			//組み合わせによるダメージ値の設定
+			damageValue=30;
+
+		}
 
 		alert('ただいまの攻撃値:'+damageValue);
 		alienHP=alienHP-damageValue;
@@ -282,17 +332,41 @@ function mouseUpListner(e) {
 
 
 
-	
-	//青色解除
-	select1.style.backgroundColor="#ffb098";
-	
-	//次のアイテム
-	setItem(nowSelect);
+	if(nowSelect!=null && nowSelect2==null){
+		//青色解除
+		//次のアイテム
+		//選択中アイテムリセット
+		select1.style.backgroundColor="#ffb098";
+		setItem(nowSelect);
+		nowSelect=null;
+	}
 
-	//選択中アイテムリセット
-	nowSelect=null;
-//	console.log(nowSelect);
+	else if(nowSelect==null && nowSelect2!=null){
+		//青色解除
+		//次のアイテム
+		//選択中アイテムリセット
+		select2.style.backgroundColor="#ffb098";
+		setItem(nowSelect2);
+		nowSelect2=null;
+	}
 	
+	else if(nowSelect!=null && nowSelect2!=null){
+		//青色解除
+		//次のアイテム
+		//選択中アイテムリセット
+		select1.style.backgroundColor="#ffb098";
+		setItem(nowSelect);
+		nowSelect=null;
+		
+		select2.style.backgroundColor="#ffb098";
+		setItem(nowSelect2);
+		nowSelect2=null;
+	}
+	
+	
+	
+	
+
 }
 
 

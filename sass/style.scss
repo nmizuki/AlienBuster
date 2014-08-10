@@ -5,6 +5,14 @@
 $buttonBorder: #ff5d2d;
 $buttonColor: #ffb098;
 
+$activeBorder: #ff3b19;
+$activeColor: #ff6f56;
+
+.active{
+  background-color: $activeColor !important;
+  border:solid $activeBorder 1px !important;
+}
+
 html,body{
   height: 100%;
   overflow: hidden;
@@ -112,6 +120,7 @@ html,body{
           @include border-radius(3px);
           border: solid 1px $buttonBorder;
           background-color: $buttonColor;
+          cursor: pointer;
         }
         &:nth-child(even){
           margin-left: 4%;
