@@ -5,15 +5,9 @@ var ctx=canvas.getContext('2d');
 
 //宇宙人の画像をcanvasに設定
 var imageObj = new Image();
-imageObj.src = "img/kabo.jpg";
-imageObj.onload = function() {
-	//ctx.drawImage(imageObj, 60, 20,96.25,72.125); 
-	ctx.scale(0.5, 0.25);
-	//読み込んだimgをcanvas(c1)に貼付け
-	ctx.drawImage(imageObj, 30, 0);
-	//変形マトリックスをもとに戻す
-	ctx.scale( 1/0.5, 1/0.25);
-};
+var alien = draw(ctx);
+console.log(alien);
+
 
 ////////アイテムたち//////配列に/////
 
@@ -102,24 +96,24 @@ function setItem(itemPlace){
 			if(displayItems[i]==num1){
 				break;
 			}
-			
+
 			//既存なし
 			else if(i>=3){
 				//alert("既存なし");
 				newFlag=true;
 			}
-			
+
 		}
-		
+
 		if(newFlag==true){
 			break;
 		}
 	}
-	
+
 	//buttonのvalue値を描き替え
 	var itemA=document.getElementById(itemPlace );
 	itemA.value=items[num1].name;
-	
+
 	//表示中アイテムに登録(アイテム配列の添え字)
 	switch(itemPlace){
 		case 'item1':
@@ -134,13 +128,13 @@ function setItem(itemPlace){
 		case 'item4':
 			displayItems[3]=num1;
 			break;
-	
+
 	}
-	
+
 	for(var i=0;i<4;i++){
 		console.log(i+'個めは'+displayItems[i]);
 	}
-}		
+}
 
 //////////////////////////////////
 
@@ -180,10 +174,10 @@ function mouseUpListner(e) {
 				damageIndex=displayItems[3];
 				break;
 		}
-		
+
 		var damageValue=items[damageIndex].damage;
 		ctx.font = "10pt Arial";
-		ctx.fillText(damageValue+'', 50, 50); 
+		ctx.fillText(damageValue+'', 50, 50);
 
 //		alert('ただいまの攻撃値:'+damageValue);
 		alienHP=alienHP-damageValue;
@@ -195,17 +189,17 @@ function mouseUpListner(e) {
 
 
 
-	
+
 	//青色解除
 	select1.style.backgroundColor="#ffb098";
-	
+
 	//次のアイテム
 	setItem(nowSelect);
 
 	//選択中アイテムリセット
 	nowSelect=null;
 //	console.log(nowSelect);
-	
+
 }
 
 
@@ -213,10 +207,10 @@ function mouseUpListner(e) {
 var sec=10;
 
 function disp(){
-		
+
 	console.log(sec);
 	console.log('自分の残り体力'+myHP);
-	
+
 	if(sec!=0){
 		sec--;
 	}
@@ -231,7 +225,7 @@ function disp(){
 		}
 		sec=10;
 	}
-	
+
 	setTimeout("disp()", 1000);
 
 }
@@ -247,7 +241,7 @@ function alienAttack(){
 ///////////ゲームオーバー
 function gameover(){
 	ctx.font = "20pt Arial";
-	ctx.fillText("gameover", 50, 50); 
+	ctx.fillText("gameover", 50, 50);
 }
 
 
@@ -255,5 +249,5 @@ function gameover(){
 
 function win(){
 	ctx.font = "20pt Arial";
-	ctx.fillText("WIN!!!", 50, 50); 
-}	
+	ctx.fillText("WIN!!!", 50, 50);
+}
