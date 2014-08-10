@@ -8,7 +8,7 @@ var ctx=canvas.getContext('2d');
 var imageObj = new Image();
 imageObj.src = "img/kabo.jpg";
 imageObj.onload = function() {
-	//ctx.drawImage(imageObj, 60, 20,96.25,72.125); 
+	//ctx.drawImage(imageObj, 60, 20,96.25,72.125);
 	ctx.scale(0.5, 0.25);
 	//読み込んだimgをcanvas(c1)に貼付け
 	ctx.drawImage(imageObj, 30, 0);
@@ -81,11 +81,11 @@ function setItem(itemPlace){
 			if(displayItems[i]==num1){
 			}
 		}
-	
+
 	//buttonのvalue値を描き替え
 	var itemA=document.getElementById(itemPlace );
 	itemA.value=items[num1].name;
-	
+
 	//表示中アイテムに登録(アイテム配列の添え字)
 	switch(itemPlace){
 		case 'item1':
@@ -100,9 +100,9 @@ function setItem(itemPlace){
 		case 'item4':
 			displayItems[4]=num1;
 			break;
-	
+
 	}
-}		
+}
 
 //////////////////////////////////
 
@@ -124,17 +124,17 @@ function selectA(selectPlace){
 function mouseUpListner(e) {
 	var select1=document.getElementById(nowSelect);
 	console.log(nowSelect);
-	
+
 	//青色解除
 	select1.style.backgroundColor="white";
-	
+
 	//次のアイテム
 	setItem(nowSelect);
 
 	//選択中アイテムリセット
 	nowSelect=null;
 	console.log(nowSelect);
-	
+
 }
 
 /////
