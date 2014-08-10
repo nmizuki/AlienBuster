@@ -56,6 +56,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 html, body {
   height: 100%;
+  overflow: hidden;
 }
 
 #index {
@@ -96,7 +97,6 @@ html, body {
   margin: 0 auto;
   padding-top: 20px;
   overflow: hidden;
-  touch-action: none;
 }
 #wrapper #enemyStatus {
   width: 98%;
@@ -110,8 +110,10 @@ html, body {
 #wrapper #enemyStatus p #hp {
   width: 150px;
   height: auto;
+  float: left;
 }
 #wrapper #enemyStatus p progress {
+  float: right;
   display: inline-block;
   height: 50px;
 }
@@ -130,15 +132,17 @@ html, body {
 }
 #wrapper #myStatus {
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
 }
 #wrapper #myStatus p img {
   width: 150px;
   height: auto;
+  float: left;
 }
 #wrapper #myStatus p progress {
   display: inline-block;
   height: 50px;
+  float: right;
 }
 #wrapper #buttons {
   display: block;

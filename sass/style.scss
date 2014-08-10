@@ -7,6 +7,7 @@ $buttonColor: #ffb098;
 
 html,body{
   height: 100%;
+  overflow: hidden;
 }
 #index{
   display: block;
@@ -46,7 +47,6 @@ html,body{
   margin: 0 auto;
   padding-top: 20px;
   overflow: hidden;
-  touch-action: none;
   #enemyStatus{
     width: 98%;
     p{
@@ -55,8 +55,10 @@ html,body{
       #hp{
         width: 150px;
         height: auto;
+        float: left;
       }
       progress{
+        float: right;
         display: inline-block;
         height: 50px;
       }
@@ -78,15 +80,17 @@ html,body{
 
   #myStatus{
     position: absolute;
-    bottom: 0;
+    bottom: -5px;
     p{
       img{
         width: 150px;
         height: auto;
+        float: left;
       }
       progress{
         display: inline-block;
         height: 50px;
+        float: right;
       }
     }
 
