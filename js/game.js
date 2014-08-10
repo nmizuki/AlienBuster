@@ -79,6 +79,7 @@ var displayItems=new Array(4);
 
 ////選択中ボタン
 var nowSelect;
+var nowSelect2;
 
 /////宇宙人HP
 var alienHP=100;
@@ -159,8 +160,38 @@ function setItem(itemPlace){
 
 /////選択中アイテムは青色に/////////
 function selectA(selectPlace){
-	nowSelect=selectPlace;
-//	console.log(nowSelect);
+	//選択済み
+	if(selectPlace==nowSelect){
+		//選択解除
+		var select1=document.getElementById(nowSelect);
+		select1.style.backgroundColor="#ffb098";
+		nowSelect=null;
+		alert('選択解除１');
+		//ret
+		return;
+	}
+	else if(selectPlace==nowSelect2){
+		//選択解除
+		var select1=document.getElementById(nowSelect2);
+		select1.style.backgroundColor="#ffb098";
+		nowSelect2=null;
+		alert('選択解除２');
+		//ret
+		return;
+	}
+	
+	
+	
+	//未選択のボタン
+	if(nowSelect==null){
+		nowSelect=selectPlace;
+		alert('新たに1に登録');
+	}
+	else if(nowSelect2==null){
+		nowSelect2=selectPlace;
+		alert('新たに２に登録');
+
+	}
 	var select=document.getElementById(selectPlace);
 	select.style.backgroundColor="blue";
 	
@@ -186,9 +217,33 @@ function selectA(selectPlace){
 		var hiddenPlace=document.getElementById('hc');
 		hiddenPlace.value=giveColor1;
 
+	
+	//canvas操作が開始したら
+	canvas.addEventListener('mousedown', mouseDownListner, false);
+
 
 	//canvas操作が終了したら
 	canvas.addEventListener('mouseup', mouseUpListner, false);
+}
+
+//canvas上のマウスダウンで操作開始とみなす（仮）
+function mouseDownListner(e) {
+	//ここで描画？
+	//1のみ選択
+	if(nowSelect!=null && nowSelect2==null){
+		//alert('1のみ！');
+		
+	}
+	//2のみ選択
+	else if(nowSelect==null && nowSelect2!=null){
+		//alert('2のみ！');		
+	}
+	//両方選択
+	else if(nowSelect!=null && nowSelect2!=null){
+		//alert('両方！！');
+		
+	}
+
 }
 
 //canvas上のマウスアップで操作終了とみなす（仮）
@@ -221,7 +276,7 @@ function mouseUpListner(e) {
 		alienHP=alienHP-damageValue;
 		var hp=document.getElementById('alienhpTag');
 		hp.value=alienHP;
-		if(alienHP==0){
+		if(alienHP<=0){
 			win();
 		}
 
@@ -247,7 +302,7 @@ var sec=10;
 function disp(){
 		
 	console.log(sec);
-	console.log('自分の残り体力'+myHP);
+//	console.log('自分の残り体力'+myHP);
 	
 	if(sec!=0){
 		sec--;
@@ -281,7 +336,9 @@ function gameover(){
 	ctx.font = "20pt Arial";
 	ctx.fillText("gameover", 50, 50); 
 	
-	window.location.reload();
+	setTimeout("end();",2000);
+	setTimeout("window.location.reload();", 5000);
+	
 
 }
 
@@ -292,6 +349,11 @@ function win(){
 	ctx.font = "20pt Arial";
 	ctx.fillText("WIN!!!", 50, 50); 
 	
-	window.location.reload();
+	setTimeout("end();",2000);
+	setTimeout("window.location.reload();", 5000);
 
 }	
+
+function end(){
+	ctx.fillText("3秒後に新しいゲームが始まります。", 80, 80);
+}
