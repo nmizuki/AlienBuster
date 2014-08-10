@@ -1,13 +1,20 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="ja">
 <head>
-    <title>宇宙人バスター</title>
-    <link rel='stylesheet' href='css/style.css' />
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <meta name="viewport" content="width=device-width initial-scale=1.0" />
+  <title>宇宙人バスター</title>
+  <link rel='stylesheet' href='css/style.css' />
 </head>
 <body onLoad="getItem();">
   <div id="wrapper">
     <div id="enemyStatus">
-      <p><img src='img/hp.png' id="hp" width='180px' height='40px'></p>
+      <p>
+        <img src='img/hp.png' id="hp" width='180px' height='40px'>
+        <progress value="50" max="100"></progress>
+      </p>
     </div>
     <canvas id="game"></canvas>
     <form id="buttons">
@@ -19,7 +26,10 @@
       </ul>
     </form>
     <div id="myStatus">
-      <img src='img/myhp.png' id="myhp" width='180px' height='40px'>
+      <p>
+        <img src='img/myhp.png' id="myhp" width='180px' height='40px'>
+        <progress value="50" max="100"></progress>
+      </p>
     </div>
   </div>
 
