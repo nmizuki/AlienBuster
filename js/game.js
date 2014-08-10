@@ -183,6 +183,10 @@ function mouseUpListner(e) {
 		
 		var damageValue=items[damageIndex].damage;
 		alert('ただいまの攻撃値:'+damageValue);
+		alienHP=alienHP-damageValue;
+		var hp=document.getElementById('alienhpTag');
+		hp.value=alienHP;
+
 
 
 	
@@ -230,6 +234,8 @@ function disp(){
 ///////////宇宙人の攻撃
 function alienAttack(){
 	myHP=myHP-20;
+	var myhp=document.getElementById('myhpTag');
+	myhp.value=myHP;
 }
 
 ///////////ゲームオーバー
