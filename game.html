@@ -5,23 +5,27 @@
     <link rel='stylesheet' href='css/style.css' />
 </head>
 <body onLoad="getItem();">
-  <div id="wrapper">
-    <div id="enemyStatus">
-      <p><img src='img/hp.png' id="hp" width='180px' height='40px'></p>
-    </div>
-    <canvas id="game"></canvas>
-    <form id="buttons">
-      <ul>
-        <li><input type="button" value="" id="item1" class="button" onClick="selectA('item1');"></li>
-        <li><input type="button" value="" id="item2" class="button" onClick="selectA('item2');"></li>
-        <li><input type="button" value="" id="item3" class="button" onClick="selectA('item3');"></li>
-        <li><input type="button" value="" id="item4" class="button" onClick="selectA('item4');"></li>
-      </ul>
-    </form>
-    <div id="myStatus">
-      <img src='img/myhp.png' id="myhp" width='180px' height='40px'>
-    </div>
+<div id="wrapper">
+
+  <div id="enemyStatus">
+    <p><img src='img/hp.png' id="hp"></p>
   </div>
+
+  <canvas id="game"></canvas>
+
+  <div id="myStatus">
+    <img src='img/myhp.png' id="myhp">
+  </div>
+
+  <form id="buttons">
+    <ul>
+      <li><input type="button" value="" id="item1" class="button" onClick="selectA('item1');"></li>
+      <li><input type="button" value="" id="item2" class="button" onClick="selectA('item2');"></li>
+      <li><input type="button" value="" id="item3" class="button" onClick="selectA('item3');"></li>
+      <li><input type="button" value="" id="item4" class="button" onClick="selectA('item4');"></li>
+    </ul>
+  </form>
+</div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src='js/game.js'></script>
