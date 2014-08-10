@@ -52,6 +52,7 @@
 				y,
 				borderWidth = 5,
 				isDrawing = false;
+				
 				var canvas_info = canvas.getBoundingClientRect();
     			canvas.width = canvas_info.width;
     			canvas.height = canvas_info.height;
@@ -59,16 +60,16 @@
     			var canvas_y = canvas_info.top;
    				var canvas_width = canvas_info.width;
     			var canvas_height = canvas_info.height;
-
-			$('#game').touchstart(function(e){
+    			
+			$('#game').mousedown(function(e){
 				isDrawing = true;
-				startX = e.changedTouch[0].pageX - canvas_x;
-				startY = e.changedTouch[0].pageY - canvas_y;
+				startX = e.pageX;
+				startY = e.pageY- canvas_y;
 			})
-			.touchmove(function(e){
+			.mousemove(function(e){
 				if(!isDrawing) return;
-				x = e.changedTouch[0].pageX - $(this).offset().left - borderWidth;
-				y = e.changedTouch[0].pageY - $(this).offset().top - borderWidth;
+				x = e.pageX - $(this).offset().left - borderWidth;
+				y = e.pageY - $(this).offset().top - borderWidth;
 				ctx.beginPath();
 				ctx.moveTo(startX,startY);
 				ctx.lineTo(x,y);
@@ -76,7 +77,7 @@
 				startX = x;
 				startY = y;
 			})
-			.touchend(function(){
+			.mouseup(function(){
 				isDrawing = false;
 			})
 			.touchleave(function(){
