@@ -44,7 +44,6 @@ items[7].name="雑巾";
 items[8].name="海苔";
 
 
-
 //////表示中アイテム///
 var displayItems=new Array(4);
 
@@ -58,8 +57,15 @@ var displayItems=new Array(4);
 ////選択中ボタン
 var nowSelect;
 
+/////宇宙人HP
+var alienHP=5;
+/////自分のHP
+var myHP=1;
+
+
 ///////////アイテム４つ設定////////////
 function getItem(){
+	disp();
 	for(var i=1;i<5;i++){
 		var itemPlace='item'+i;
 		setItem(itemPlace);
@@ -154,4 +160,44 @@ function mouseUpListner(e) {
 	nowSelect=null;
 //	console.log(nowSelect);
 	
+}
+
+
+//タイマー
+var sec=10;
+
+function disp(){
+		
+	console.log(sec);
+	console.log('自分の残り体力'+myHP);
+	
+	if(sec!=0){
+		sec--;
+	}
+
+	//////////タイマーが0に
+	else{
+		alienAttack();
+		//myHPが0に
+		if(myHP==0){
+			gameover();
+			return;
+		}
+		sec=10;
+	}
+	
+	setTimeout("disp()", 1000);
+
+}
+
+
+///////////宇宙人の攻撃
+function alienAttack(){
+	myHP--;
+}
+
+///////////ゲームオーバー
+function gameover(){
+	ctx.font = "20pt Arial";
+	ctx.fillText("gameover", 10, 50); 
 }
