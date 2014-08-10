@@ -164,7 +164,27 @@ function mouseUpListner(e) {
 //	console.log(nowSelect);
 
 	//攻撃
-	
+		//display配列の添字を取得
+		var damageIndex;
+		switch(nowSelect){
+			case 'item1':
+				damageIndex=displayItems[0];
+				break;
+			case 'item2':
+				damageIndex=displayItems[1];
+				break;
+			case 'item3':
+				damageIndex=displayItems[2];
+				break;
+			case 'item4':
+				damageIndex=displayItems[3];
+				break;
+		}
+		
+		var damageValue=items[damageIndex].damage;
+		alert('ただいまの攻撃値:'+damageValue);
+
+
 	
 	//青色解除
 	select1.style.backgroundColor="#ffb098";
