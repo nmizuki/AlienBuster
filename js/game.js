@@ -149,18 +149,19 @@ function setItem(itemPlace){
 
 
 /////選択中アイテムは青色に/////////
-$(function(){
 	// inputがクリックされた時の処理
-  $(".click").on("click", function(){
+  function clickCard(id){
+		$(function(){
 		// クリックされたオブジェクトのIdとClassを取得
-		var thisId = $(this).attr("id");
-		var thisClass = $(this).attr("class");
+		var thisId = $("#"+id).attr("id");
+		var thisClass = $("#"+id).attr("class");
+		console.log(thisClass);
 
 		// クラスがあるかどうか
 		if(thisClass == undefined || thisClass == "click"){
 			// なかった場合
 			// Class active をセット
-			$(this).addClass("active");
+			$("#"+id).addClass("active");
 			// あった場合は色をhiddenにセット
 			var giveColor;
 			switch(thisId){
@@ -184,18 +185,17 @@ $(function(){
 
 			//canvas操作が終了したら
 			$("#game").mouseup(function(e){
-				console.log("aaa");
-				mouseUpListner(thisId);
+					mouseUpListner(thisId);
+					return;
 			});
 
 		} else {
 			// ある場合
 			// Class active を外す
-			$(this).removeClass("active");
+			$("#"+id).removeClass("active");
 		}
-
 	});
-});
+	};
 
 //canvas上のマウスアップで操作終了とみなす（仮）
 function mouseUpListner(thisId) {
@@ -230,8 +230,7 @@ function mouseUpListner(thisId) {
 			win();
 		}
 
-
-
+		console.log(damageValue);
 
 	//選択解除
 	$(function(){
@@ -240,9 +239,6 @@ function mouseUpListner(thisId) {
 
 	//次のアイテム
 	setItem(thisId);
-
-	//選択中アイテムリセット
-	thisId = null;
 
 }
 
