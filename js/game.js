@@ -20,6 +20,7 @@ function init() {
 function Cell() {
 	this.name = null;
 	this.damage=0;
+	this.color=null;
 }
 
 //総アイテム数
@@ -33,31 +34,31 @@ var items=new Array();
 
 //アイテムオブジェクトを配列に格納
 items[0].name="醤油";
-items[0].damage="20";
+items[0].damage=20;
 items[0].color="red";
 items[1].name="洗剤";
-items[1].damage="30";
+items[1].damage=30;
 items[1].color="green";
 items[2].name="水";
-items[2].damage="10";
+items[2].damage=10;
 items[2].color="blue";
 items[3].name="片栗粉";
-items[3].damage="20";
+items[3].damage=20;
 items[3].color="black";
 items[4].name="ケチャップ";
-items[4].damage="20";
+items[4].damage=20;
 items[4].color="red";
 items[5].name="塩";
-items[5].damage="20";
+items[5].damage=20;
 items[5].color="black";
 items[6].name="エナジードリンク";
-items[6].damage="-30";
+items[6].damage=-30;
 items[6].color="yellow";
 items[7].name="雑巾";
-items[7].damage="10";
+items[7].damage=10;
 items[7].color="gray";
 items[8].name="海苔";
-items[8].damage="10";
+items[8].damage=10;
 items[8].color="green";
 
 
@@ -97,7 +98,7 @@ function setItem(itemPlace){
 	var newFlag=false;
 	while(true){
 		var num1=Math.random();
-		num1=Math.floor((num1*(itemNum-1))+1);
+		num1=Math.floor(num1*itemNum);
 		console.log(num1);
 
 		//既に入っていないかチェック
@@ -119,9 +120,15 @@ function setItem(itemPlace){
 			break;
 		}
 	}
+<<<<<<< HEAD
 
 	//buttonのvalue値を描き替え
 	var itemA=document.getElementById(itemPlace );
+=======
+
+	//bottonのvalue値を描き替え
+	var itemA=document.getElementById(itemPlace);
+>>>>>>> koide
 	itemA.value=items[num1].name;
 
 	//表示中アイテムに登録(アイテム配列の添え字)
@@ -252,7 +259,7 @@ function disp(){
 	else{
 		alienAttack();
 		//myHPが0に
-		if(myHP==0){
+		if(myHP<=0){
 			gameover();
 			return;
 		}
@@ -275,6 +282,8 @@ function alienAttack(){
 function gameover(){
 	ctx.font = "20pt Arial";
 	ctx.fillText("gameover", 50, 50);
+
+	window.location.reload();
 }
 
 
@@ -283,16 +292,8 @@ function gameover(){
 function win(){
 	ctx.font = "20pt Arial";
 	ctx.fillText("WIN!!!", 50, 50);
+	window.location.reload();
 }
-
-
-
-
-
-
-
-
-
 
 
 
