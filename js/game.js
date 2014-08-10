@@ -182,10 +182,16 @@ function mouseUpListner(e) {
 		}
 		
 		var damageValue=items[damageIndex].damage;
-		alert('ただいまの攻撃値:'+damageValue);
+		ctx.font = "10pt Arial";
+		ctx.fillText(damageValue+'', 50, 50); 
+
+//		alert('ただいまの攻撃値:'+damageValue);
 		alienHP=alienHP-damageValue;
 		var hp=document.getElementById('alienhpTag');
 		hp.value=alienHP;
+		if(alienHP==0){
+			win();
+		}
 
 
 
@@ -241,5 +247,13 @@ function alienAttack(){
 ///////////ゲームオーバー
 function gameover(){
 	ctx.font = "20pt Arial";
-	ctx.fillText("gameover", 10, 50); 
+	ctx.fillText("gameover", 50, 50); 
 }
+
+
+//////勝利
+
+function win(){
+	ctx.font = "20pt Arial";
+	ctx.fillText("WIN!!!", 50, 50); 
+}	
