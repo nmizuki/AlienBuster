@@ -1,11 +1,11 @@
 var canvas = document.getElementById('game');
-//console.log(canvas);
 var ctx = canvas.getContext('2d');
-//console.log(ctx);
 
 //宇宙人の画像をcanvasに設定
 function init() {
-  draw(ctx)
+  var canvas = document.getElementById('game');
+  var ctx = canvas.getContext('2d');
+  draw(ctx);
 }
 
 
@@ -482,10 +482,8 @@ function draw(ctx) {
 
 
 $(function(){
-  var canvas = document.getElementById('game');
   if(!canvas || !canvas.getContext) return false;
   var ctx = canvas.getContext('2d');
-
   var startX,
     startY,
     x,
@@ -502,6 +500,7 @@ $(function(){
       var canvas_height = canvas_info.height;
 
   $('#game').mousedown(function(e){
+    console.log("aaa");
     isDrawing = true;
     startX = e.pageX;
     startY = e.pageY- canvas_y;
