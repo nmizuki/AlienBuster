@@ -1,5 +1,3 @@
-var canvas = document.getElementById('game');
-var ctx = canvas.getContext('2d');
 
 //宇宙人の画像をcanvasに設定
 function init() {
@@ -8,547 +6,73 @@ function init() {
   draw(ctx);
 }
 
-
-
-
-
-
-/* canvas用関数 */
-function draw(ctx) {
-  // 1/
-  ctx.save();
-  ctx.beginPath();
-  ctx.moveTo(343.6, 226.0);
-  ctx.bezierCurveTo(343.6, 281.1, 313.7, 325.8, 276.9, 325.8);
-  ctx.bezierCurveTo(240.0, 325.8, 210.1, 281.1, 210.1, 226.0);
-  ctx.bezierCurveTo(210.1, 170.9, 240.0, 126.3, 276.9, 126.3);
-  ctx.bezierCurveTo(313.7, 126.3, 343.6, 170.9, 343.6, 226.0);
-  ctx.closePath();
-  ctx.fillStyle = "rgb(50, 79, 58)";
-  ctx.fill();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(321.7, 235.9);
-  ctx.bezierCurveTo(321.7, 311.8, 275.9, 373.3, 219.4, 373.3);
-  ctx.bezierCurveTo(163.0, 373.3, 117.2, 311.8, 117.2, 235.9);
-  ctx.bezierCurveTo(117.2, 160.0, 163.0, 98.4, 219.4, 98.4);
-  ctx.bezierCurveTo(275.9, 98.4, 321.7, 160.0, 321.7, 235.9);
-  ctx.closePath();
-  ctx.fillStyle = "rgb(188, 209, 64)";
-  ctx.fill();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(217.7, 67.3);
-  ctx.bezierCurveTo(270.4, 67.3, 313.1, 110.0, 313.1, 162.7);
-  ctx.bezierCurveTo(313.1, 215.3, 270.4, 258.0, 217.7, 258.0);
-  ctx.bezierCurveTo(165.0, 258.0, 122.3, 215.3, 122.3, 162.7);
-  ctx.bezierCurveTo(122.3, 110.0, 165.0, 67.3, 217.7, 67.3);
-  ctx.closePath();
-  ctx.fillStyle = "rgb(148, 166, 48)";
-  ctx.fill();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(218.8, 52.0);
-  ctx.bezierCurveTo(272.7, 52.0, 316.3, 95.6, 316.3, 149.5);
-  ctx.bezierCurveTo(316.3, 203.3, 272.7, 247.0, 218.8, 247.0);
-  ctx.bezierCurveTo(165.0, 247.0, 121.3, 203.3, 121.3, 149.5);
-  ctx.bezierCurveTo(121.3, 95.6, 165.0, 52.0, 218.8, 52.0);
-  ctx.closePath();
-  ctx.fillStyle = "rgb(188, 209, 64)";
-  ctx.fill();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(201.4, 80.0);
-  ctx.bezierCurveTo(214.2, 79.0, 205.0, 63.9, 223.4, 65.4);
-  ctx.strokeStyle = "rgb(223, 5, 21)";
-  ctx.stroke();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(199.4, 74.0);
-  ctx.bezierCurveTo(197.8, 75.5, 194.3, 76.7, 192.2, 77.3);
-  ctx.bezierCurveTo(191.5, 74.8, 189.1, 74.1, 188.1, 72.7);
-  ctx.stroke();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(228.8, 436.1);
-  ctx.bezierCurveTo(334.1, 436.1, 419.9, 427.5, 419.9, 417.0);
-  ctx.bezierCurveTo(419.9, 406.4, 334.1, 397.8, 228.8, 397.8);
-  ctx.bezierCurveTo(123.6, 397.8, 37.8, 406.4, 37.8, 417.0);
-  ctx.bezierCurveTo(37.8, 427.5, 123.6, 436.1, 228.8, 436.1);
-  ctx.closePath();
-  ctx.fillStyle = "rgb(50, 79, 58)";
-  ctx.fill();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(202.9, 51.8);
-  ctx.bezierCurveTo(239.3, 46.8, 272.5, 69.4, 277.0, 102.3);
-  ctx.bezierCurveTo(281.6, 135.1, 255.7, 165.8, 219.3, 170.8);
-  ctx.bezierCurveTo(182.8, 175.9, 149.6, 153.3, 145.1, 120.4);
-  ctx.bezierCurveTo(140.6, 87.5, 166.5, 56.8, 202.9, 51.8);
-  ctx.closePath();
-  ctx.fillStyle = "rgb(121, 137, 36)";
-  ctx.fill();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(207.8, 59.9);
-  ctx.bezierCurveTo(239.7, 55.6, 268.8, 75.3, 272.8, 104.2);
-  ctx.bezierCurveTo(276.7, 133.0, 254.1, 159.9, 222.1, 164.2);
-  ctx.bezierCurveTo(190.2, 168.6, 161.1, 148.8, 157.2, 120.0);
-  ctx.bezierCurveTo(153.2, 91.2, 175.9, 64.3, 207.8, 59.9);
-  ctx.closePath();
-  ctx.fillStyle = "rgb(254, 254, 254)";
-  ctx.fill();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(213.9, 92.1);
-  ctx.bezierCurveTo(231.8, 92.4, 246.0, 107.2, 245.6, 125.2);
-  ctx.bezierCurveTo(245.3, 143.1, 230.4, 157.3, 212.5, 156.9);
-  ctx.bezierCurveTo(194.6, 156.5, 180.4, 141.7, 180.8, 123.8);
-  ctx.bezierCurveTo(181.1, 105.9, 196.0, 91.7, 213.9, 92.1);
-  ctx.closePath();
-  ctx.fillStyle = "rgb(4, 0, 0)";
-  ctx.fill();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(201.3, 108.8);
-  ctx.bezierCurveTo(201.9, 104.8, 205.7, 101.9, 209.8, 102.5);
-  ctx.bezierCurveTo(213.8, 103.1, 216.6, 106.9, 216.0, 111.0);
-  ctx.bezierCurveTo(215.4, 115.1, 211.7, 117.9, 207.6, 117.3);
-  ctx.bezierCurveTo(203.5, 116.7, 200.7, 112.9, 201.3, 108.8);
-  ctx.closePath();
-  ctx.fillStyle = "rgb(254, 254, 254)";
-  ctx.fill();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(165.7, 333.8);
-  ctx.bezierCurveTo(158.3, 339.5, 153.0, 351.4, 153.0, 364.0);
-  ctx.bezierCurveTo(153.0, 379.0, 155.0, 416.3, 174.7, 415.0);
-  ctx.bezierCurveTo(181.3, 414.5, 180.7, 396.8, 182.3, 411.6);
-  ctx.bezierCurveTo(183.1, 418.3, 192.6, 423.7, 197.6, 413.0);
-  ctx.bezierCurveTo(197.9, 412.4, 206.2, 422.1, 209.5, 402.6);
-  ctx.bezierCurveTo(212.0, 387.6, 210.4, 363.2, 202.0, 349.7);
-  ctx.bezierCurveTo(194.4, 337.6, 178.8, 323.5, 165.7, 333.8);
-  ctx.closePath();
-  ctx.fillStyle = "rgb(188, 209, 64)";
-  ctx.fill();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(256.0, 333.8);
-  ctx.bezierCurveTo(248.7, 339.5, 243.3, 351.4, 243.3, 364.0);
-  ctx.bezierCurveTo(243.3, 379.0, 245.4, 416.3, 265.1, 415.0);
-  ctx.bezierCurveTo(271.7, 414.5, 271.1, 396.8, 272.7, 411.6);
-  ctx.bezierCurveTo(273.4, 418.3, 282.9, 423.7, 288.0, 413.0);
-  ctx.bezierCurveTo(288.2, 412.4, 296.6, 422.1, 299.9, 402.6);
-  ctx.bezierCurveTo(302.4, 387.6, 300.8, 363.2, 292.4, 349.7);
-  ctx.bezierCurveTo(284.8, 337.6, 269.1, 323.5, 256.0, 333.8);
-  ctx.closePath();
-  ctx.fill();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(150.6, 239.2);
-  ctx.bezierCurveTo(146.3, 232.0, 135.9, 225.6, 124.1, 223.6);
-  ctx.bezierCurveTo(110.1, 221.1, 74.8, 216.7, 73.1, 233.5);
-  ctx.bezierCurveTo(72.6, 239.1, 89.3, 241.5, 75.2, 240.5);
-  ctx.bezierCurveTo(68.8, 240.0, 62.3, 247.1, 71.7, 253.0);
-  ctx.bezierCurveTo(72.2, 253.4, 61.9, 258.8, 79.6, 264.7);
-  ctx.bezierCurveTo(93.4, 269.3, 116.5, 272.0, 130.4, 267.1);
-  ctx.bezierCurveTo(142.8, 262.7, 158.3, 251.8, 150.6, 239.2);
-  ctx.closePath();
-  ctx.fillStyle = "rgb(167, 186, 56)";
-  ctx.fill();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(292.0, 254.5);
-  ctx.bezierCurveTo(297.0, 261.8, 308.2, 267.7, 320.5, 268.8);
-  ctx.bezierCurveTo(335.2, 270.1, 371.8, 271.5, 372.1, 253.3);
-  ctx.bezierCurveTo(372.2, 247.2, 354.9, 246.2, 369.5, 246.0);
-  ctx.bezierCurveTo(376.0, 245.9, 382.1, 237.7, 372.1, 232.1);
-  ctx.bezierCurveTo(371.5, 231.8, 381.7, 225.0, 362.9, 220.3);
-  ctx.bezierCurveTo(348.4, 216.7, 324.4, 216.0, 310.5, 222.6);
-  ctx.bezierCurveTo(298.1, 228.5, 283.0, 241.6, 292.0, 254.5);
-  ctx.closePath();
-  ctx.fill();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(203.5, 63.5);
-  ctx.bezierCurveTo(194.2, 75.0, 203.8, 82.2, 209.5, 93.5);
-  ctx.stroke();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(165.4, 90.0);
-  ctx.bezierCurveTo(171.2, 96.5, 177.0, 100.2, 182.8, 106.0);
-  ctx.stroke();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(161.4, 116.7);
-  ctx.bezierCurveTo(164.9, 102.9, 173.3, 123.1, 182.8, 116.7);
-  ctx.stroke();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(182.8, 74.7);
-  ctx.bezierCurveTo(181.7, 78.1, 181.3, 82.9, 180.9, 86.6);
-  ctx.bezierCurveTo(190.4, 86.1, 192.6, 91.0, 194.1, 98.7);
-  ctx.stroke();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(229.4, 94.7);
-  ctx.bezierCurveTo(240.3, 91.2, 237.8, 89.7, 241.3, 84.8);
-  ctx.bezierCurveTo(243.5, 81.7, 238.4, 74.7, 248.4, 75.3);
-  ctx.bezierCurveTo(260.0, 76.0, 250.6, 88.9, 261.4, 90.0);
-  ctx.stroke();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(245.4, 133.4);
-  ctx.bezierCurveTo(248.6, 129.8, 252.8, 127.9, 255.4, 130.7);
-  ctx.stroke();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(244.1, 116.0);
-  ctx.bezierCurveTo(248.1, 116.6, 255.3, 119.3, 259.0, 117.4);
-  ctx.bezierCurveTo(265.6, 114.1, 256.7, 103.4, 271.4, 106.0);
-  ctx.stroke();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(238.8, 88.0);
-  ctx.bezierCurveTo(234.6, 86.1, 231.6, 82.7, 230.1, 79.4);
-  ctx.stroke();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(242.8, 80.7);
-  ctx.bezierCurveTo(245.3, 85.5, 247.8, 90.0, 252.8, 91.4);
-  ctx.stroke();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(240.8, 106.7);
-  ctx.bezierCurveTo(242.5, 103.7, 245.7, 102.6, 249.4, 103.4);
-  ctx.stroke();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(180.1, 128.0);
-  ctx.bezierCurveTo(173.8, 126.4, 170.7, 127.6, 164.8, 124.0);
-  ctx.stroke();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(170.8, 126.7);
-  ctx.bezierCurveTo(172.1, 131.2, 170.5, 134.2, 166.1, 135.4);
-  ctx.stroke();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(94.0, 272.3);
-  ctx.lineTo(48.8, 272.3);
-  ctx.lineTo(48.8, 159.6);
-  ctx.lineTo(94.0, 159.6);
-  ctx.lineTo(94.0, 272.3);
-  ctx.closePath();
-  ctx.fillStyle = "rgb(254, 254, 254)";
-  ctx.fill();
-  ctx.lineWidth = 0.2;
-  ctx.strokeStyle = "rgb(0, 0, 0)";
-  ctx.stroke();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(94.1, 272.4);
-  ctx.lineTo(48.6, 272.4);
-  ctx.lineTo(48.6, 247.2);
-  ctx.lineTo(94.1, 247.2);
-  ctx.lineTo(94.1, 272.4);
-  ctx.closePath();
-  ctx.fillStyle = "rgb(196, 69, 58)";
-  ctx.fill();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(94.0, 273.6);
-  ctx.bezierCurveTo(94.0, 275.9, 83.8, 277.7, 71.4, 277.7);
-  ctx.bezierCurveTo(58.9, 277.7, 48.8, 275.9, 48.8, 273.6);
-  ctx.bezierCurveTo(48.8, 271.3, 58.9, 269.5, 71.4, 269.5);
-  ctx.bezierCurveTo(83.8, 269.5, 94.0, 271.3, 94.0, 273.6);
-  ctx.closePath();
-  ctx.fillStyle = "rgb(205, 207, 205)";
-  ctx.fill();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(94.0, 247.3);
-  ctx.bezierCurveTo(94.0, 249.6, 83.8, 251.4, 71.4, 251.4);
-  ctx.bezierCurveTo(58.9, 251.4, 48.8, 249.6, 48.8, 247.3);
-  ctx.bezierCurveTo(48.8, 245.0, 58.9, 243.2, 71.4, 243.2);
-  ctx.bezierCurveTo(83.8, 243.2, 94.0, 245.0, 94.0, 247.3);
-  ctx.closePath();
-  ctx.fillStyle = "rgb(254, 254, 254)";
-  ctx.fill();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(94.0, 270.7);
-  ctx.bezierCurveTo(94.0, 273.0, 83.8, 274.8, 71.4, 274.8);
-  ctx.bezierCurveTo(58.9, 274.8, 48.8, 273.0, 48.8, 270.7);
-  ctx.bezierCurveTo(48.8, 268.4, 58.9, 266.6, 71.4, 266.6);
-  ctx.bezierCurveTo(83.8, 266.6, 94.0, 268.4, 94.0, 270.7);
-  ctx.closePath();
-  ctx.fillStyle = "rgb(196, 69, 58)";
-  ctx.fill();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(94.0, 159.5);
-  ctx.bezierCurveTo(94.0, 160.7, 83.8, 161.6, 71.4, 161.6);
-  ctx.bezierCurveTo(58.9, 161.6, 48.8, 160.7, 48.8, 159.5);
-  ctx.bezierCurveTo(48.8, 158.4, 58.9, 157.5, 71.4, 157.5);
-  ctx.bezierCurveTo(83.8, 157.5, 94.0, 158.4, 94.0, 159.5);
-  ctx.closePath();
-  ctx.fillStyle = "rgb(205, 207, 205)";
-  ctx.fill();
-
-  // 1/Lab
-  ctx.font = "B 10.8px '¬’ËƒSƒVƒbƒN Pr6N'";
-  ctx.fillStyle = "rgb(196, 69, 58)";
-  ctx.fillText("Lab.", 62.2, 177.1);
-
-  // 1/Lab
-  ctx.fillText("Lab.", 67.6, 190.1);
-
-  // 1/Lab
-  ctx.fillText("Lab.", 53.2, 208.1);
-
-  // 1/Lab
-  ctx.fillText("Lab.", 61.3, 220.8);
-
-  // 1/Lab
-  ctx.fillText("Lab.", 68.4, 233.2);
-
-  // 1/Energy
-  ctx.font = "R 6.9px '¬’ËƒSƒVƒbƒN Pr6N'";
-  ctx.fillText("Energy", 59.9, 197.5);
-
-  // 1/Energy
-  ctx.fillText("Energy", 62.2, 241.1);
-
-  // 1/ergy
-  ctx.fillText("ergy", 50.9, 231.6);
-
-  // 1/ergy
-  ctx.font = "R 6.2px '¬’ËƒSƒVƒbƒN Pr6N'";
-  ctx.fillText("ergy", 74.9, 208.4);
-
-  // 1/ergy
-  ctx.font = "R 6.9px '¬’ËƒSƒVƒbƒN Pr6N'";
-  ctx.fillText("ergy", 53.2, 188.0);
-
-  // 1/rgy
-  ctx.fillText("rgy", 51.8, 177.1);
-
-  // 1/gy
-  ctx.fillText("gy", 52.7, 219.9);
-
-  // 1/L
-  ctx.font = "B 9.7px '¬’ËƒSƒVƒbƒN Pr6N'";
-  ctx.fillText("L", 84.3, 200.1);
-
-  // 1/En
-  ctx.font = "R 6.9px '¬’ËƒSƒVƒbƒN Pr6N'";
-  ctx.fillText("En", 82.4, 220.8);
-
-  // 1/KLab
-  ctx.font = "R 7.7px '¬’ËƒSƒVƒbƒN Pr6N'";
-  ctx.fillStyle = "rgb(254, 254, 254)";
-  ctx.fillText("KLab ", 67.0, 264.5);
-
-  // 1/
-
-  // 1//
-  ctx.save();
-  ctx.beginPath();
-  ctx.moveTo(63.8, 265.7);
-  ctx.lineTo(56.1, 265.7);
-  ctx.lineTo(56.1, 256.8);
-  ctx.lineTo(63.8, 256.8);
-  ctx.lineTo(63.8, 265.7);
-  ctx.closePath();
-  ctx.fill();
-
-  // 1//
-  ctx.beginPath();
-  ctx.moveTo(64.8, 261.1);
-  ctx.bezierCurveTo(64.8, 261.7, 63.9, 262.1, 62.8, 262.1);
-  ctx.bezierCurveTo(61.6, 262.1, 60.7, 261.7, 60.7, 261.1);
-  ctx.bezierCurveTo(60.7, 260.5, 61.6, 260.1, 62.8, 260.1);
-  ctx.bezierCurveTo(63.9, 260.1, 64.8, 260.5, 64.8, 261.1);
-  ctx.closePath();
-  ctx.fillStyle = "rgb(196, 69, 58)";
-  ctx.fill();
-
-  // 1//
-  ctx.beginPath();
-  ctx.moveTo(59.3, 266.6);
-  ctx.bezierCurveTo(58.7, 266.6, 58.1, 265.8, 58.1, 264.8);
-  ctx.bezierCurveTo(58.1, 263.9, 58.7, 263.1, 59.3, 263.1);
-  ctx.bezierCurveTo(60.0, 263.1, 60.5, 263.9, 60.5, 264.8);
-  ctx.bezierCurveTo(60.5, 265.8, 60.0, 266.6, 59.3, 266.6);
-  ctx.closePath();
-  ctx.fill();
-
-  // 1//
-  ctx.beginPath();
-  ctx.moveTo(59.3, 259.4);
-  ctx.bezierCurveTo(58.7, 259.4, 58.1, 258.6, 58.1, 257.7);
-  ctx.bezierCurveTo(58.1, 256.7, 58.7, 255.9, 59.3, 255.9);
-  ctx.bezierCurveTo(60.0, 255.9, 60.5, 256.7, 60.5, 257.7);
-  ctx.bezierCurveTo(60.5, 258.6, 60.0, 259.4, 59.3, 259.4);
-  ctx.closePath();
-  ctx.fill();
-
-  // 1/
-  ctx.restore();
-  ctx.beginPath();
-  ctx.moveTo(202.8, 80.0);
-  ctx.bezierCurveTo(203.2, 78.5, 203.7, 77.2, 203.5, 75.5);
-  ctx.bezierCurveTo(208.1, 75.2, 209.0, 72.7, 212.1, 70.0);
-  ctx.lineWidth = 1.0;
-  ctx.strokeStyle = "rgb(223, 5, 21)";
-  ctx.stroke();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(53.3, 151.6);
-  ctx.bezierCurveTo(57.3, 129.6, 44.0, 122.9, 28.0, 113.6);
-  ctx.bezierCurveTo(33.3, 111.6, 42.0, 111.6, 48.0, 110.9);
-  ctx.bezierCurveTo(44.0, 94.9, 29.3, 84.3, 23.3, 69.6);
-  ctx.bezierCurveTo(30.7, 70.3, 37.3, 71.6, 44.0, 74.3);
-  ctx.bezierCurveTo(46.7, 56.9, 43.3, 36.9, 34.0, 22.3);
-  ctx.bezierCurveTo(39.3, 28.9, 46.7, 35.6, 54.0, 40.3);
-  ctx.bezierCurveTo(60.7, 30.3, 66.0, 17.6, 66.0, 5.6);
-  ctx.bezierCurveTo(75.3, 35.6, 80.0, 30.9, 100.7, 18.9);
-  ctx.bezierCurveTo(98.0, 31.6, 87.3, 40.3, 88.0, 53.6);
-  ctx.bezierCurveTo(96.7, 48.9, 106.7, 47.6, 112.7, 56.3);
-  ctx.bezierCurveTo(94.0, 59.6, 80.0, 70.3, 74.0, 88.9);
-  ctx.bezierCurveTo(81.3, 84.3, 91.3, 82.3, 99.3, 85.6);
-  ctx.bezierCurveTo(88.0, 92.3, 76.0, 101.6, 72.0, 114.3);
-  ctx.bezierCurveTo(80.7, 114.9, 90.7, 113.6, 98.0, 116.9);
-  ctx.bezierCurveTo(77.3, 124.9, 76.0, 149.6, 54.0, 154.3);
-  ctx.fillStyle = "rgb(244, 226, 76)";
-  ctx.fill();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(0.0, 40.3);
-  ctx.bezierCurveTo(0.0, 48.9, 4.0, 55.6, 12.0, 56.9);
-  ctx.bezierCurveTo(14.7, 48.3, 10.0, 40.3, 0.7, 38.3);
-  ctx.fill();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(22.3, 5.3);
-  ctx.bezierCurveTo(26.4, 10.7, 27.8, 16.1, 36.0, 18.3);
-  ctx.bezierCurveTo(45.6, 5.3, 38.8, 5.3, 26.4, 0.9);
-  ctx.fill();
-
-  // 1/
-  ctx.beginPath();
-  ctx.moveTo(114.0, 0.9);
-  ctx.bezierCurveTo(107.6, 6.7, 105.4, 14.2, 109.8, 21.0);
-  ctx.bezierCurveTo(118.0, 17.1, 120.8, 8.2, 115.9, 0.0);
-  ctx.fill();
-  ctx.restore();
-}
-
-
 $(function(){
-  if(!canvas || !canvas.getContext) return false;
-  var ctx = canvas.getContext('2d');
-  var startX,
-    startY,
-    x,
-    y,
-    borderWidth = 5,
-    isDrawing = false;
 
-    var canvas_info = canvas.getBoundingClientRect();
-      canvas.width = canvas_info.width;
-      canvas.height = canvas_info.height;
-       var canvas_x = canvas_info.left;
-      var canvas_y = canvas_info.top;
-       var canvas_width = canvas_info.width;
-      var canvas_height = canvas_info.height;
+  // 必要な変数を宣言しておく
+  var canvas = document.getElementById("game");
+  var c = canvas.getContext("2d");
+  var w = 450;
+  var h = 400;
+  var drawing = false;
+  var oldPos;
 
-  $('#game').mousedown(function(e){
-    console.log("aaa");
-    isDrawing = true;
-    startX = e.pageX;
-    startY = e.pageY- canvas_y;
-  })
-  .mousemove(function(e){
-    if(!isDrawing) return;
-    x = e.pageX - $(this).offset().left - borderWidth;
-    y = e.pageY - $(this).offset().top - borderWidth;
-    ctx.beginPath();
-    ctx.moveTo(startX,startY);
-    ctx.lineTo(x,y);
-    ctx.stroke();
-    startX = x;
-    startY = y;
-  })
-  .mouseup(function(){
-    isDrawing = false;
-  })
-  .touchleave(function(){
-    isDrawing = false;
-  });
+  // 絵の描画
+  draw(c);
 
-  $('#hc').change(function(){
-    ctx.strokeStyle = "red";
-  });
-  $('#penWidth').change(function(){
-    ctx.lineWidth = $(this).val();
-  });
+  // CanvasとContextを初期化する
+  canvas.width = w;
+  canvas.height = h;
+  c.strokeStyle = "#3c3c3c";
 
-  $('#erase').click(function(){
-    if(!confirm('本当に消去しますか？'))return;
-    ctx.clearRect(0,0,canvas.width,canvas.height);
-  });
+  var color = $("#hc").val();
+  if (color != undefined) {
+    c.strokeStyle = color;
+  }
 
-  $('#save').click(function(){
-    var img = $('<img>').attr({
-      width: 100,
-      height: 50,
-      src: canvas.toDataURL()
-    });
-    var link = $('<a>').attr({
-      href:canvas.toDataURL().replace('image/png',
-      'application/octet-stream'),
-      download: new Date().getTime() + '.png'
-    });
-    $('#gallery').append(link.append(img.addClass('thumbnail')));
-    ctx.clearRect(0,0,canvas.width,canvas.height);
-  });
+  c.lineWidth = 7;
+  c.lineJoin = "round";
+  c.lineCap = "round";
+
+  // タップ開始時に、絵を描く準備をする
+  canvas.addEventListener("touchstart", function (event) {
+    drawing = true;
+    oldPos = getPosT(event);
+  }, false);
+
+  // タップ終了時に、絵を描く後処理を行う
+  canvas.addEventListener("touchend", function () {
+    drawing = false;
+  }, false);
+
+  // gestureイベント（２本指以上で触ると発生するやつ）の
+  // 終了時にも絵を描く後処理を行う
+  canvas.addEventListener("gestureend", function () {
+    console.log("mouseout");
+    drawing = false;
+  }, false);
+
+  // 実際に絵を描く処理
+  // 前回に保存した位置から現在の位置迄線を引く
+  canvas.addEventListener("touchmove", function (event) {
+    var pos = getPosT(event);
+    if (drawing) {
+      c.beginPath();
+      c.moveTo(oldPos.x, oldPos.y);
+      c.lineTo(pos.x, pos.y);
+      c.stroke();
+      c.closePath();
+      oldPos = pos;
+    }
+  }, false);
+
+  // タップ位置を取得する為の関数群
+  function scrollX(){return document.documentElement.scrollLeft || document.body.scrollLeft;}
+  function scrollY(){return document.documentElement.scrollTop || document.body.scrollTop;}
+  function getPosT (event) {
+    var mouseX = event.touches[0].clientX - $(canvas).position().left + scrollX();
+    var mouseY = event.touches[0].clientY - $(canvas).position().top + scrollY();
+    return {x:mouseX, y:mouseY};
+  }
 
   function stopDefault(event) {
     event.preventDefault();
@@ -563,5 +87,472 @@ $(function(){
   document.addEventListener("gesturechange", stopDefault, false);
   document.addEventListener("gestureend", stopDefault, false);
 
-
 });
+
+
+// $(function(){
+//   if(!canvas || !canvas.getContext) return false;
+//   var ctx = canvas.getContext('2d');
+//   var startX,
+//       startY,
+//       x,
+//       y,
+//       borderWidth = 5,
+//       isDrawing = false,
+//       oldPos;
+//
+//     var canvas_info = canvas.getBoundingClientRect();
+//       canvas.width = canvas_info.width;
+//       canvas.height = canvas_info.height;
+//       var canvas_x = canvas_info.left;
+//       var canvas_y = canvas_info.top;
+//       var canvas_width = canvas_info.width;
+//       var canvas_height = canvas_info.height;
+//
+//   $('#game').touchstart(function(event){
+//     isDrawing = true;
+//     startX = event.pageX;
+//     startY = event.pageY- canvas_y;
+//   });
+//
+//   $('#game').touchmove(function(event){
+//     if(!isDrawing) return;
+//     var pos = getPosT(event);
+//     canvas.beginPath();
+//     canvas.moveTo(oldPos.x, oldPos.y);
+//     canvas.lineTo(pos.x, pos.y);
+//     canvas.stroke();
+//     canvas.closePath();
+//     oldPos = pos;
+//   });
+//
+//   $('#game').touchend(function(){
+//     isDrawing = false;
+//   });
+//
+//   $('#game').touchleave(function(){
+//     isDrawing = false;
+//   });
+//
+//   $('#hc').change(function(){
+//     ctx.strokeStyle = "red";
+//   });
+//   $('#penWidth').change(function(){
+//     ctx.lineWidth = $(this).val();
+//   });
+//
+//    // タップ位置を取得する為の関数群
+//   function scrollX(){return document.documentElement.scrollLeft || document.body.scrollLeft;}
+//   function scrollY(){return document.documentElement.scrollTop || document.body.scrollTop;}
+//   function getPosT (event) {
+//     var canvas_x = event.touches[0].clientX - $(canvas).position().left + scrollX();
+//     var canvas_y = event.touches[0].clientY - $(canvas).position().top + scrollY();
+//     return {x:canvas_x, y:canvas_y};
+//   }
+//
+//   function stopDefault(event) {
+//     event.preventDefault();
+//   }
+//
+//   // タッチイベントの初期化
+//   document.addEventListener("touchstart", stopDefault, false);
+//   document.addEventListener("touchmove", stopDefault, false);
+//   document.addEventListener("touchend", stopDefault, false);
+//   // ジェスチャーイベントの初期化
+//   document.addEventListener("gesturestart", stopDefault, false);
+//   document.addEventListener("gesturechange", stopDefault, false);
+//   document.addEventListener("gestureend", stopDefault, false);
+//
+//
+// });
+
+
+
+
+/* canvas用関数 */
+function draw(ctx) {
+
+  // 1/
+  ctx.save();
+  ctx.beginPath();
+  ctx.moveTo(94.0, 142.4);
+  ctx.bezierCurveTo(91.4, 138.1, 85.3, 134.3, 78.2, 133.1);
+  ctx.bezierCurveTo(69.9, 131.6, 48.9, 129.0, 47.9, 139.0);
+  ctx.bezierCurveTo(47.6, 142.4, 57.5, 143.8, 49.1, 143.2);
+  ctx.bezierCurveTo(45.3, 142.9, 41.5, 147.1, 47.0, 150.6);
+  ctx.bezierCurveTo(47.3, 150.8, 41.2, 154.1, 51.8, 157.6);
+  ctx.bezierCurveTo(59.9, 160.3, 73.7, 161.9, 82.0, 159.0);
+  ctx.bezierCurveTo(89.4, 156.4, 98.6, 149.9, 94.0, 142.4);
+  ctx.closePath();
+  ctx.fillStyle = "rgb(167, 186, 56)";
+  ctx.fill();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(60.3, 162.1);
+  ctx.lineTo(33.4, 162.1);
+  ctx.lineTo(33.4, 95.0);
+  ctx.lineTo(60.3, 95.0);
+  ctx.lineTo(60.3, 162.1);
+  ctx.closePath();
+  ctx.fillStyle = "rgb(254, 254, 254)";
+  ctx.fill();
+  ctx.lineWidth = 0.2;
+  ctx.stroke();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(60.4, 162.2);
+  ctx.lineTo(33.3, 162.2);
+  ctx.lineTo(33.3, 147.2);
+  ctx.lineTo(60.4, 147.2);
+  ctx.lineTo(60.4, 162.2);
+  ctx.closePath();
+  ctx.fillStyle = "rgb(196, 69, 58)";
+  ctx.fill();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(60.3, 147.2);
+  ctx.bezierCurveTo(60.3, 148.6, 54.3, 149.7, 46.8, 149.7);
+  ctx.bezierCurveTo(39.4, 149.7, 33.4, 148.6, 33.4, 147.2);
+  ctx.bezierCurveTo(33.4, 145.9, 39.4, 144.8, 46.8, 144.8);
+  ctx.bezierCurveTo(54.3, 144.8, 60.3, 145.9, 60.3, 147.2);
+  ctx.closePath();
+  ctx.fillStyle = "rgb(254, 254, 254)";
+  ctx.fill();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(208.9, 134.6);
+  ctx.bezierCurveTo(208.9, 167.4, 191.1, 194.0, 169.2, 194.0);
+  ctx.bezierCurveTo(147.2, 194.0, 129.4, 167.4, 129.4, 134.6);
+  ctx.bezierCurveTo(129.4, 101.8, 147.2, 75.2, 169.2, 75.2);
+  ctx.bezierCurveTo(191.1, 75.2, 208.9, 101.8, 208.9, 134.6);
+  ctx.closePath();
+  ctx.fillStyle = "rgb(50, 79, 58)";
+  ctx.fill();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(195.9, 140.4);
+  ctx.bezierCurveTo(195.9, 185.6, 168.6, 222.2, 135.0, 222.2);
+  ctx.bezierCurveTo(101.4, 222.2, 74.1, 185.6, 74.1, 140.4);
+  ctx.bezierCurveTo(74.1, 95.2, 101.4, 58.6, 135.0, 58.6);
+  ctx.bezierCurveTo(168.6, 58.6, 195.9, 95.2, 195.9, 140.4);
+  ctx.closePath();
+  ctx.fillStyle = "rgb(188, 209, 64)";
+  ctx.fill();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(133.9, 40.0);
+  ctx.bezierCurveTo(165.3, 40.0, 190.7, 65.5, 190.7, 96.8);
+  ctx.bezierCurveTo(190.7, 128.2, 165.3, 153.6, 133.9, 153.6);
+  ctx.bezierCurveTo(102.6, 153.6, 77.2, 128.2, 77.2, 96.8);
+  ctx.bezierCurveTo(77.2, 65.5, 102.6, 40.0, 133.9, 40.0);
+  ctx.closePath();
+  ctx.fillStyle = "rgb(148, 166, 48)";
+  ctx.fill();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(134.6, 30.9);
+  ctx.bezierCurveTo(166.7, 30.9, 192.7, 56.9, 192.7, 89.0);
+  ctx.bezierCurveTo(192.7, 121.1, 166.7, 147.1, 134.6, 147.1);
+  ctx.bezierCurveTo(102.6, 147.1, 76.6, 121.1, 76.6, 89.0);
+  ctx.bezierCurveTo(76.6, 56.9, 102.6, 30.9, 134.6, 30.9);
+  ctx.closePath();
+  ctx.fillStyle = "rgb(188, 209, 64)";
+  ctx.fill();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(124.3, 47.6);
+  ctx.bezierCurveTo(131.9, 47.1, 126.4, 38.0, 137.4, 38.9);
+  ctx.lineWidth = 1.0;
+  ctx.strokeStyle = "rgb(223, 5, 21)";
+  ctx.stroke();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(123.1, 44.1);
+  ctx.bezierCurveTo(122.1, 45.0, 120.0, 45.7, 118.8, 46.0);
+  ctx.bezierCurveTo(118.4, 44.5, 116.9, 44.1, 116.3, 43.3);
+  ctx.stroke();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(140.6, 259.7);
+  ctx.bezierCurveTo(203.2, 259.7, 254.3, 254.5, 254.3, 248.3);
+  ctx.bezierCurveTo(254.3, 242.0, 203.2, 236.8, 140.6, 236.8);
+  ctx.bezierCurveTo(77.9, 236.8, 26.8, 242.0, 26.8, 248.3);
+  ctx.bezierCurveTo(26.8, 254.5, 77.9, 259.7, 140.6, 259.7);
+  ctx.closePath();
+  ctx.fillStyle = "rgb(50, 79, 58)";
+  ctx.fill();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(125.1, 30.9);
+  ctx.bezierCurveTo(146.8, 27.9, 166.6, 41.3, 169.3, 60.9);
+  ctx.bezierCurveTo(172.0, 80.5, 156.6, 98.7, 134.9, 101.7);
+  ctx.bezierCurveTo(113.2, 104.7, 93.4, 91.3, 90.7, 71.7);
+  ctx.bezierCurveTo(88.0, 52.1, 103.5, 33.8, 125.1, 30.9);
+  ctx.closePath();
+  ctx.fillStyle = "rgb(121, 137, 36)";
+  ctx.fill();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(128.1, 35.7);
+  ctx.bezierCurveTo(147.1, 33.1, 164.4, 44.9, 166.7, 62.0);
+  ctx.bezierCurveTo(169.1, 79.2, 155.6, 95.2, 136.6, 97.8);
+  ctx.bezierCurveTo(117.6, 100.4, 100.3, 88.6, 97.9, 71.5);
+  ctx.bezierCurveTo(95.5, 54.3, 109.0, 38.3, 128.1, 35.7);
+  ctx.closePath();
+  ctx.fillStyle = "rgb(254, 254, 254)";
+  ctx.fill();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(131.7, 54.8);
+  ctx.bezierCurveTo(142.3, 55.0, 150.8, 63.9, 150.6, 74.5);
+  ctx.bezierCurveTo(150.4, 85.2, 141.5, 93.6, 130.9, 93.4);
+  ctx.bezierCurveTo(120.2, 93.2, 111.7, 84.4, 112.0, 73.7);
+  ctx.bezierCurveTo(112.2, 63.1, 121.0, 54.6, 131.7, 54.8);
+  ctx.closePath();
+  ctx.fillStyle = "rgb(4, 0, 0)";
+  ctx.fill();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(124.2, 64.8);
+  ctx.bezierCurveTo(124.6, 62.4, 126.8, 60.7, 129.2, 61.1);
+  ctx.bezierCurveTo(131.7, 61.4, 133.3, 63.7, 133.0, 66.1);
+  ctx.bezierCurveTo(132.6, 68.5, 130.4, 70.2, 127.9, 69.8);
+  ctx.bezierCurveTo(125.5, 69.5, 123.8, 67.2, 124.2, 64.8);
+  ctx.closePath();
+  ctx.fillStyle = "rgb(254, 254, 254)";
+  ctx.fill();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(103.0, 198.7);
+  ctx.bezierCurveTo(98.6, 202.1, 95.4, 209.2, 95.4, 216.7);
+  ctx.bezierCurveTo(95.4, 225.6, 96.6, 247.9, 108.4, 247.1);
+  ctx.bezierCurveTo(112.3, 246.8, 111.9, 236.3, 112.9, 245.1);
+  ctx.bezierCurveTo(113.3, 249.0, 119.0, 252.3, 122.0, 245.9);
+  ctx.bezierCurveTo(122.1, 245.5, 127.1, 251.3, 129.1, 239.7);
+  ctx.bezierCurveTo(130.6, 230.8, 129.6, 216.2, 124.6, 208.2);
+  ctx.bezierCurveTo(120.1, 201.0, 110.8, 192.6, 103.0, 198.7);
+  ctx.closePath();
+  ctx.fillStyle = "rgb(188, 209, 64)";
+  ctx.fill();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(156.8, 198.7);
+  ctx.bezierCurveTo(152.4, 202.1, 149.2, 209.2, 149.2, 216.7);
+  ctx.bezierCurveTo(149.2, 225.6, 150.4, 247.9, 162.2, 247.1);
+  ctx.bezierCurveTo(166.1, 246.8, 165.8, 236.3, 166.7, 245.1);
+  ctx.bezierCurveTo(167.1, 249.0, 172.8, 252.3, 175.8, 245.9);
+  ctx.bezierCurveTo(176.0, 245.5, 180.9, 251.3, 182.9, 239.7);
+  ctx.bezierCurveTo(184.4, 230.8, 183.4, 216.2, 178.4, 208.2);
+  ctx.bezierCurveTo(173.9, 201.0, 164.6, 192.6, 156.8, 198.7);
+  ctx.closePath();
+  ctx.fill();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(178.2, 151.6);
+  ctx.bezierCurveTo(181.2, 155.9, 187.8, 159.4, 195.1, 160.1);
+  ctx.bezierCurveTo(203.9, 160.8, 225.7, 161.7, 225.9, 150.8);
+  ctx.bezierCurveTo(226.0, 147.2, 215.6, 146.6, 224.3, 146.5);
+  ctx.bezierCurveTo(228.2, 146.4, 231.9, 141.5, 225.9, 138.2);
+  ctx.bezierCurveTo(225.5, 138.0, 231.6, 134.0, 220.4, 131.2);
+  ctx.bezierCurveTo(211.8, 129.0, 197.5, 128.6, 189.2, 132.5);
+  ctx.bezierCurveTo(181.8, 136.0, 172.8, 143.9, 178.2, 151.6);
+  ctx.closePath();
+  ctx.fillStyle = "rgb(167, 186, 56)";
+  ctx.fill();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(125.5, 37.8);
+  ctx.bezierCurveTo(120.0, 44.6, 125.7, 48.9, 129.1, 55.6);
+  ctx.stroke();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(102.8, 53.6);
+  ctx.bezierCurveTo(106.3, 57.5, 109.7, 59.7, 113.2, 63.1);
+  ctx.stroke();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(100.5, 69.5);
+  ctx.bezierCurveTo(102.5, 61.2, 107.5, 73.3, 113.2, 69.5);
+  ctx.stroke();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(113.2, 44.5);
+  ctx.bezierCurveTo(112.5, 46.5, 112.3, 49.3, 112.0, 51.5);
+  ctx.bezierCurveTo(117.7, 51.3, 119.0, 54.2, 119.9, 58.8);
+  ctx.stroke();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(140.9, 56.4);
+  ctx.bezierCurveTo(147.4, 54.3, 145.9, 53.4, 148.0, 50.5);
+  ctx.bezierCurveTo(149.3, 48.6, 146.3, 44.4, 152.2, 44.8);
+  ctx.bezierCurveTo(159.1, 45.3, 153.5, 52.9, 160.0, 53.6);
+  ctx.stroke();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(150.5, 79.4);
+  ctx.bezierCurveTo(152.4, 77.3, 154.9, 76.1, 156.4, 77.8);
+  ctx.stroke();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(149.7, 69.1);
+  ctx.bezierCurveTo(152.0, 69.4, 156.3, 71.0, 158.6, 69.9);
+  ctx.bezierCurveTo(162.5, 67.9, 157.1, 61.5, 166.0, 63.1);
+  ctx.stroke();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(146.5, 52.4);
+  ctx.bezierCurveTo(144.0, 51.3, 142.2, 49.2, 141.3, 47.3);
+  ctx.stroke();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(148.9, 48.0);
+  ctx.bezierCurveTo(150.4, 50.9, 151.9, 53.6, 154.8, 54.4);
+  ctx.stroke();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(147.7, 63.5);
+  ctx.bezierCurveTo(148.7, 61.7, 150.6, 61.1, 152.9, 61.5);
+  ctx.stroke();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(111.6, 76.2);
+  ctx.bezierCurveTo(107.8, 75.3, 105.9, 76.0, 102.4, 73.8);
+  ctx.stroke();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(106.0, 75.4);
+  ctx.bezierCurveTo(106.8, 78.1, 105.8, 79.9, 103.2, 80.6);
+  ctx.stroke();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(60.3, 162.9);
+  ctx.bezierCurveTo(60.3, 164.2, 54.3, 165.3, 46.8, 165.3);
+  ctx.bezierCurveTo(39.4, 165.3, 33.4, 164.2, 33.4, 162.9);
+  ctx.bezierCurveTo(33.4, 161.5, 39.4, 160.4, 46.8, 160.4);
+  ctx.bezierCurveTo(54.3, 160.4, 60.3, 161.5, 60.3, 162.9);
+  ctx.closePath();
+  ctx.fillStyle = "rgb(205, 207, 205)";
+  ctx.fill();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(60.3, 161.2);
+  ctx.bezierCurveTo(60.3, 162.5, 54.3, 163.6, 46.8, 163.6);
+  ctx.bezierCurveTo(39.4, 163.6, 33.4, 162.5, 33.4, 161.2);
+  ctx.bezierCurveTo(33.4, 159.8, 39.4, 158.7, 46.8, 158.7);
+  ctx.bezierCurveTo(54.3, 158.7, 60.3, 159.8, 60.3, 161.2);
+  ctx.closePath();
+  ctx.fillStyle = "rgb(196, 69, 58)";
+  ctx.fill();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(60.3, 95.0);
+  ctx.bezierCurveTo(60.3, 95.7, 54.3, 96.2, 46.8, 96.2);
+  ctx.bezierCurveTo(39.4, 96.2, 33.4, 95.7, 33.4, 95.0);
+  ctx.bezierCurveTo(33.4, 94.3, 39.4, 93.8, 46.8, 93.8);
+  ctx.bezierCurveTo(54.3, 93.8, 60.3, 94.3, 60.3, 95.0);
+  ctx.closePath();
+  ctx.fillStyle = "rgb(205, 207, 205)";
+  ctx.fill();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(125.1, 47.6);
+  ctx.bezierCurveTo(125.3, 46.8, 125.6, 46.0, 125.5, 44.9);
+  ctx.bezierCurveTo(128.2, 44.7, 128.8, 43.3, 130.6, 41.7);
+  ctx.stroke();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(36.1, 90.3);
+  ctx.bezierCurveTo(38.5, 77.2, 30.5, 73.2, 21.0, 67.6);
+  ctx.bezierCurveTo(24.2, 66.5, 29.3, 66.5, 32.9, 66.1);
+  ctx.bezierCurveTo(30.5, 56.5, 21.8, 50.2, 18.2, 41.4);
+  ctx.bezierCurveTo(22.6, 41.8, 26.6, 42.6, 30.5, 44.2);
+  ctx.bezierCurveTo(32.1, 33.9, 30.1, 22.0, 24.6, 13.3);
+  ctx.bezierCurveTo(27.8, 17.2, 32.1, 21.2, 36.5, 24.0);
+  ctx.bezierCurveTo(40.5, 18.0, 43.6, 10.5, 43.6, 3.3);
+  ctx.bezierCurveTo(49.2, 21.2, 52.0, 18.4, 64.3, 11.3);
+  ctx.bezierCurveTo(62.7, 18.8, 56.3, 24.0, 56.7, 31.9);
+  ctx.bezierCurveTo(61.9, 29.1, 67.8, 28.3, 71.4, 33.5);
+  ctx.bezierCurveTo(60.3, 35.5, 52.0, 41.8, 48.4, 53.0);
+  ctx.bezierCurveTo(52.8, 50.2, 58.7, 49.0, 63.5, 51.0);
+  ctx.bezierCurveTo(56.7, 54.9, 49.6, 60.5, 47.2, 68.0);
+  ctx.bezierCurveTo(52.4, 68.4, 58.3, 67.6, 62.7, 69.6);
+  ctx.bezierCurveTo(50.4, 74.4, 49.6, 89.1, 36.5, 91.9);
+  ctx.fillStyle = "rgb(244, 226, 76)";
+  ctx.fill();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(4.3, 24.0);
+  ctx.bezierCurveTo(4.3, 29.1, 6.7, 33.1, 11.5, 33.9);
+  ctx.bezierCurveTo(13.1, 28.7, 10.3, 24.0, 4.7, 22.8);
+  ctx.fill();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(17.6, 3.1);
+  ctx.bezierCurveTo(20.1, 6.4, 20.9, 9.6, 25.8, 10.9);
+  ctx.bezierCurveTo(31.5, 3.1, 27.4, 3.1, 20.1, 0.6);
+  ctx.fill();
+
+  // 1/
+  ctx.beginPath();
+  ctx.moveTo(72.2, 0.5);
+  ctx.bezierCurveTo(68.4, 4.0, 67.1, 8.4, 69.7, 12.5);
+  ctx.bezierCurveTo(74.6, 10.2, 76.2, 4.9, 73.4, 0.0);
+  ctx.fill();
+
+  // 1/
+
+  // 1/KLabEnergyKLabEnergy
+  ctx.font = "R 4.6px '���˃S�V�b�N Pr6N'";
+  ctx.fillStyle = "rgb(196, 69, 58)";
+  ctx.fillText("KLab", 33.9, 105.0);
+  ctx.fillText("Ener", 34.4, 113.0);
+  ctx.fillText("gy", 36.4, 121.0);
+  ctx.fillText("KLab", 33.9, 129.0);
+  ctx.fillText("Ener", 34.4, 137.0);
+  ctx.fillText("gy", 36.4, 145.0);
+
+  // 1/KLab
+  ctx.font = "R 1.7px '���˃S�V�b�N Pr6N'";
+  ctx.save();
+  ctx.transform(0.941, 0.000, 0.000, 1.000, 34.4, 159.6);
+  ctx.fillStyle = "rgb(254, 254, 254)";
+  ctx.fillText("KLab", 0, 0);
+  ctx.restore();
+  ctx.restore();
+}

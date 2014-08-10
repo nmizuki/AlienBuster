@@ -25,27 +25,35 @@ var items=new Array();
 items[0].name="醤油";
 items[0].damage=20;
 items[0].color="red";
+
 items[1].name="洗剤";
 items[1].damage=30;
 items[1].color="green";
+
 items[2].name="水";
 items[2].damage=10;
 items[2].color="blue";
+
 items[3].name="片栗粉";
 items[3].damage=20;
 items[3].color="black";
+
 items[4].name="ケチャップ";
 items[4].damage=20;
 items[4].color="red";
+
 items[5].name="塩";
 items[5].damage=20;
 items[5].color="black";
+
 items[6].name="エナジードリンク";
 items[6].damage=-30;
 items[6].color="yellow";
+
 items[7].name="雑巾";
 items[7].damage=10;
 items[7].color="gray";
+
 items[8].name="海苔";
 items[8].damage=10;
 items[8].color="green";
@@ -141,48 +149,61 @@ function setItem(itemPlace){
 
 
 /////選択中アイテムは青色に/////////
-function selectA(selectPlace){
-	nowSelect=selectPlace;
-//	console.log(nowSelect);
-	var select=document.getElementById(selectPlace);
-	select.style.backgroundColor="blue";
+$(function(){
+	// inputがクリックされた時の処理
+  $(".click").on("click", function(){
+		// クリックされたオブジェクトのIdとClassを取得
+		var thisId = $(this).attr("id");
+		var thisClass = $(this).attr("class");
 
-	//hiddenに色を設定
-		var giveColor;
-		switch(nowSelect){
-			case 'item1':
-				giveColor=displayItems[0];
-				break;
-			case 'item2':
-				giveColor=displayItems[1];
-				break;
-			case 'item3':
-				giveColor=displayItems[2];
-				break;
-			case 'item4':
-				giveColor=displayItems[3];
-				break;
+		// クラスがあるかどうか
+		if(thisClass == undefined || thisClass == "click"){
+			// なかった場合
+			// Class active をセット
+			$(this).addClass("active");
+			// あった場合は色をhiddenにセット
+			var giveColor;
+			switch(thisId){
+				case 'item1':
+					giveColor = displayItems[0];
+					break;
+				case 'item2':
+					giveColor = displayItems[1];
+					break;
+				case 'item3':
+					giveColor = displayItems[2];
+					break;
+				case 'item4':
+					giveColor = displayItems[3];
+					break;
+			}
+
+			var setColor = items[giveColor].color;
+			$("#hc").val(setColor);
+
+
+			//canvas操作が終了したら
+			$("#game").mouseup(function(e){
+				console.log("aaa");
+				mouseUpListner(thisId);
+			});
+
+		} else {
+			// ある場合
+			// Class active を外す
+			$(this).removeClass("active");
 		}
 
-		var giveColor1=items[giveColor].color;
-
-		var hiddenPlace=document.getElementById('hc');
-		hiddenPlace.value=giveColor1;
-
-
-	//canvas操作が終了したら
-	canvas.addEventListener('mouseup', mouseUpListner, false);
-}
+	});
+});
 
 //canvas上のマウスアップで操作終了とみなす（仮）
-function mouseUpListner(e) {
-	var select1=document.getElementById(nowSelect);
-//	console.log(nowSelect);
+function mouseUpListner(thisId) {
 
 	//攻撃
 		//display配列の添字を取得
 		var damageIndex;
-		switch(nowSelect){
+		switch(thisId){
 			case 'item1':
 				damageIndex=displayItems[0];
 				break;
@@ -212,15 +233,16 @@ function mouseUpListner(e) {
 
 
 
-	//青色解除
-	select1.style.backgroundColor="#ffb098";
+	//選択解除
+	$(function(){
+  	$("#buttons ul li input").removeClass("active");
+	});
 
 	//次のアイテム
-	setItem(nowSelect);
+	setItem(thisId);
 
 	//選択中アイテムリセット
-	nowSelect=null;
-//	console.log(nowSelect);
+	thisId = null;
 
 }
 
