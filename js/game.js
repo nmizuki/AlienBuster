@@ -19,8 +19,12 @@ imageObj.onload = function() {
 ////////アイテムたち//////配列に/////
 
 //アイテムオブジェクト
+/////////名前
+/////////ダメージ数
+
 function Cell() {
 	this.name = null;
+	this.damage=0;
 }
 
 //総アイテム数
@@ -34,14 +38,23 @@ var items=new Array();
 
 //アイテムオブジェクトを配列に格納
 items[0].name="醤油";
+items[0].damage="20";
 items[1].name="洗剤";
+items[1].damage="20";
 items[2].name="水";
+items[2].damage="20";
 items[3].name="片栗粉";
+items[3].damage="20";
 items[4].name="ケチャップ";
+items[4].damage="20";
 items[5].name="塩";
+items[5].damage="20";
 items[6].name="エナジードリンク";
+items[6].damage="-30";
 items[7].name="雑巾";
+items[7].damage="10";
 items[8].name="海苔";
+items[8].damage="10";
 
 
 //////表示中アイテム///
@@ -58,9 +71,9 @@ var displayItems=new Array(4);
 var nowSelect;
 
 /////宇宙人HP
-var alienHP=5;
+var alienHP=100;
 /////自分のHP
-var myHP=1;
+var myHP=100;
 
 
 ///////////アイテム４つ設定////////////
@@ -149,9 +162,32 @@ function selectA(selectPlace){
 function mouseUpListner(e) {
 	var select1=document.getElementById(nowSelect);
 //	console.log(nowSelect);
+
+	//攻撃
+		//display配列の添字を取得
+		var damageIndex;
+		switch(nowSelect){
+			case 'item1':
+				damageIndex=displayItems[0];
+				break;
+			case 'item2':
+				damageIndex=displayItems[1];
+				break;
+			case 'item3':
+				damageIndex=displayItems[2];
+				break;
+			case 'item4':
+				damageIndex=displayItems[3];
+				break;
+		}
+		
+		var damageValue=items[damageIndex].damage;
+		alert('ただいまの攻撃値:'+damageValue);
+
+
 	
 	//青色解除
-	select1.style.backgroundColor="white";
+	select1.style.backgroundColor="#ffb098";
 	
 	//次のアイテム
 	setItem(nowSelect);
@@ -193,7 +229,7 @@ function disp(){
 
 ///////////宇宙人の攻撃
 function alienAttack(){
-	myHP--;
+	myHP=myHP-20;
 }
 
 ///////////ゲームオーバー
