@@ -1,3 +1,4 @@
+
 var canvas=document.getElementById('game');
 //console.log(canvas);
 var ctx=canvas.getContext('2d');
@@ -38,23 +39,31 @@ var items=new Array();
 //アイテムオブジェクトを配列に格納
 items[0].name="醤油";
 items[0].damage="20";
-
+items[0].color="red";
 items[1].name="洗剤";
-items[1].damage="20";
+items[1].damage="30";
+items[1].color="green";
 items[2].name="水";
-items[2].damage="20";
+items[2].damage="10";
+items[2].color="blue";
 items[3].name="片栗粉";
 items[3].damage="20";
+items[3].color="black";
 items[4].name="ケチャップ";
 items[4].damage="20";
+items[4].color="red";
 items[5].name="塩";
 items[5].damage="20";
+items[5].color="black";
 items[6].name="エナジードリンク";
 items[6].damage="-30";
+items[6].color="yellow";
 items[7].name="雑巾";
 items[7].damage="10";
+items[7].color="gray";
 items[8].name="海苔";
 items[8].damage="10";
+items[8].color="green";
 
 
 //////表示中アイテム///
@@ -153,6 +162,29 @@ function selectA(selectPlace){
 //	console.log(nowSelect);
 	var select=document.getElementById(selectPlace);
 	select.style.backgroundColor="blue";
+	
+	//hiddenに色を設定
+		var giveColor;
+		switch(nowSelect){
+			case 'item1':
+				giveColor=displayItems[0];
+				break;
+			case 'item2':
+				giveColor=displayItems[1];
+				break;
+			case 'item3':
+				giveColor=displayItems[2];
+				break;
+			case 'item4':
+				giveColor=displayItems[3];
+				break;
+		}
+		
+		var giveColor1=items[giveColor].color;
+		
+		var hiddenPlace=document.getElementById('hc');
+		hiddenPlace.value=giveColor1;
+
 
 	//canvas操作が終了したら
 	canvas.addEventListener('mouseup', mouseUpListner, false);
@@ -183,9 +215,8 @@ function mouseUpListner(e) {
 		
 		var damageValue=items[damageIndex].damage;
 		ctx.font = "10pt Arial";
-		ctx.fillText(damageValue+'', 50, 50); 
 
-//		alert('ただいまの攻撃値:'+damageValue);
+		alert('ただいまの攻撃値:'+damageValue);
 		alienHP=alienHP-damageValue;
 		var hp=document.getElementById('alienhpTag');
 		hp.value=alienHP;
@@ -248,6 +279,8 @@ function alienAttack(){
 function gameover(){
 	ctx.font = "20pt Arial";
 	ctx.fillText("gameover", 50, 50); 
+	
+
 }
 
 
@@ -256,4 +289,6 @@ function gameover(){
 function win(){
 	ctx.font = "20pt Arial";
 	ctx.fillText("WIN!!!", 50, 50); 
+	
+
 }	
