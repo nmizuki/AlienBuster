@@ -4,7 +4,11 @@ var ctx = canvas.getContext('2d');
 //console.log(ctx);
 
 //宇宙人の画像をcanvasに設定
-draw(ctx);
+function init() {
+  var canvas = document.getElementById("game");
+  var ctx = canvas.getContext("2d");
+	draw(ctx)
+}
 
 
 ////////アイテムたち//////配列に/////
