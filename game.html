@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width initial-scale=1.0" />
   <title>宇宙人バスターズ</title>
   <link rel='stylesheet' href='css/style.css' />
-  
+
   <style>
     	#mycanvas{
     		border: 5px solid #999;
@@ -25,10 +25,10 @@
     <div id="enemyStatus">
       <p>
         <img src='img/hp.png' id="hp" width='180px' height='40px'>
-        <progress value="50" max="100"></progress>
+        <progress value="100" max="100"></progress>
       </p>
     </div>
-<!--    
+<!--
     	<p>
 		  <select id = "penColor">
 		    <option value = "black">黒</option>
@@ -56,14 +56,14 @@
 			var canvas = document.getElementById('game');
 			if(!canvas || !canvas.getContext) return false;
 			var ctx = canvas.getContext('2d');
-			
+
 			var startX,
 				startY,
 				x,
 				y,
 				borderWidth = 5,
 				isDrawing = false;
-				
+
 			$('#game').mousedown(function(e){
 				isDrawing = true;
 				startX = e.pageX - $(this).offset().left - borderWidth;
@@ -86,19 +86,19 @@
 			.mouseleave(function(){
 				isDrawing = false;
 			});
-			
+
 			$('#hc').change(function(){
 				ctx.strokeStyle = "red";
 			});
 			$('#penWidth').change(function(){
 				ctx.lineWidth = $(this).val();
 			});
-			
+
 			$('#erase').click(function(){
 				if(!confirm('本当に消去しますか？'))return;
 				ctx.clearRect(0,0,canvas.width,canvas.height);
 			});
-			
+
 			$('#save').click(function(){
 				var img = $('<img>').attr({
 					width: 100,
@@ -113,7 +113,7 @@
 				$('#gallery').append(link.append(img.addClass('thumbnail')));
 				ctx.clearRect(0,0,canvas.width,canvas.height);
 			});
-				
+
 		});
 	</script>
     		<input type = "hidden" id = "hc" value = "">
@@ -128,7 +128,7 @@
     <div id="myStatus">
       <p>
         <img src='img/myhp.png' id="myhp" width='180px' height='40px'>
-        <progress value="50" max="100"></progress>
+        <progress value="100" max="100"></progress>
       </p>
     </div>
   </div>
