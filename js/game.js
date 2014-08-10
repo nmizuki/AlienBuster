@@ -8,7 +8,7 @@ var ctx=canvas.getContext('2d');
 var imageObj = new Image();
 imageObj.src = "img/kabo.jpg";
 imageObj.onload = function() {
-	//ctx.drawImage(imageObj, 60, 20,96.25,72.125);
+	//ctx.drawImage(imageObj, 60, 20,96.25,72.125); 
 	ctx.scale(0.5, 0.25);
 	//読み込んだimgをcanvas(c1)に貼付け
 	ctx.drawImage(imageObj, 30, 0);
@@ -19,8 +19,12 @@ imageObj.onload = function() {
 ////////アイテムたち//////配列に/////
 
 //アイテムオブジェクト
+/////////名前
+/////////ダメージ数
+
 function Cell() {
 	this.name = null;
+	this.damage=0;
 }
 
 //総アイテム数
@@ -34,15 +38,25 @@ var items=new Array();
 
 //アイテムオブジェクトを配列に格納
 items[0].name="醤油";
+items[0].damage="20";
 items[1].name="洗剤";
+items[1].damage="20";
 items[2].name="水";
+items[2].damage="20";
 items[3].name="片栗粉";
+items[3].damage="20";
 items[4].name="ケチャップ";
+items[4].damage="20";
 items[5].name="塩";
+items[5].damage="20";
 items[6].name="エナジードリンク";
+items[6].damage="-30";
 items[7].name="雑巾";
+items[7].damage="10";
 items[8].name="海苔";
+items[8].damage="10";
 
+alert(items[8].damage);
 
 //////表示中アイテム///
 var displayItems=new Array(4);
@@ -89,24 +103,24 @@ function setItem(itemPlace){
 			if(displayItems[i]==num1){
 				break;
 			}
-
+			
 			//既存なし
 			else if(i>=3){
 				//alert("既存なし");
 				newFlag=true;
 			}
-
+			
 		}
-
+		
 		if(newFlag==true){
 			break;
 		}
 	}
-
+	
 	//buttonのvalue値を描き替え
 	var itemA=document.getElementById(itemPlace );
 	itemA.value=items[num1].name;
-
+	
 	//表示中アイテムに登録(アイテム配列の添え字)
 	switch(itemPlace){
 		case 'item1':
@@ -121,12 +135,14 @@ function setItem(itemPlace){
 		case 'item4':
 			displayItems[3]=num1;
 			break;
-
+	
 	}
+	
 	for(var i=0;i<4;i++){
 		console.log(i+'個めは'+displayItems[i]);
 	}
-}
+}		
+
 //////////////////////////////////
 
 
@@ -147,15 +163,20 @@ function selectA(selectPlace){
 function mouseUpListner(e) {
 	var select1=document.getElementById(nowSelect);
 //	console.log(nowSelect);
-	//青色解除
-	select1.style.backgroundColor="white";
 
+	//攻撃
+	
+	
+	//青色解除
+	select1.style.backgroundColor="#ffb098";
+	
 	//次のアイテム
 	setItem(nowSelect);
 
 	//選択中アイテムリセット
 	nowSelect=null;
 //	console.log(nowSelect);
+	
 }
 
 
@@ -163,10 +184,10 @@ function mouseUpListner(e) {
 var sec=10;
 
 function disp(){
-
+		
 	console.log(sec);
 	console.log('自分の残り体力'+myHP);
-
+	
 	if(sec!=0){
 		sec--;
 	}
@@ -181,38 +202,11 @@ function disp(){
 		}
 		sec=10;
 	}
-
+	
 	setTimeout("disp()", 1000);
 
 }
 
-
-//タイマー
-var sec=10;
-
-function disp(){
-
-	console.log(sec);
-	console.log('自分の残り体力'+myHP);
-
-	if(sec!=0){
-		sec--;
-	}
-
-	//////////タイマーが0に
-	else{
-		alienAttack();
-		//myHPが0に
-		if(myHP==0){
-			gameover();
-			return;
-		}
-		sec=10;
-	}
-
-	setTimeout("disp()", 1000);
-
-}
 
 ///////////宇宙人の攻撃
 function alienAttack(){
@@ -222,5 +216,5 @@ function alienAttack(){
 ///////////ゲームオーバー
 function gameover(){
 	ctx.font = "20pt Arial";
-	ctx.fillText("gameover", 10, 50);
+	ctx.fillText("gameover", 10, 50); 
 }
