@@ -185,8 +185,8 @@ function setItem(itemPlace){
 
 			//canvas操作が終了したら
 			$("#game").mouseup(function(e){
-				console.log("aaa");
-				mouseUpListner(thisId);
+					mouseUpListner(thisId);
+					return;
 			});
 
 		} else {
@@ -239,9 +239,6 @@ function mouseUpListner(thisId) {
 
 	//次のアイテム
 	setItem(thisId);
-
-	//選択中アイテムリセット
-	thisId = null;
 
 }
 
