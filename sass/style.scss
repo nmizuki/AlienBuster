@@ -81,6 +81,13 @@ html,body{
     border: solid 1px #3c3c3c;
   }
 
+  #timer{
+    position: absolute;
+    right: 20px;
+    bottom: 180px;
+    z-index: 100;
+  }
+
   #myStatus{
     position: absolute;
     bottom: -5px;
