@@ -7,7 +7,10 @@
 <body onLoad="getItem();">
   <div id="wrapper">
     <div id="enemyStatus">
-      <p><img src='img/hp.png' id="hp" width='180px' height='40px'></p>
+      <p>
+        <img src='img/hp.png' id="hp" width='180px' height='40px'>
+        <progress value="50" max="100"></progress>
+      </p>
     </div>
     <canvas id="game"></canvas>
     <form id="buttons">
@@ -19,7 +22,10 @@
       </ul>
     </form>
     <div id="myStatus">
-      <img src='img/myhp.png' id="myhp" width='180px' height='40px'>
+      <p>
+        <img src='img/myhp.png' id="myhp" width='180px' height='40px'>
+        <progress value="50" max="100"></progress>
+      </p>
     </div>
   </div>
 
