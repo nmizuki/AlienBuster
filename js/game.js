@@ -56,7 +56,6 @@ items[7].damage="10";
 items[8].name="海苔";
 items[8].damage="10";
 
-alert(items[8].damage);
 
 //////表示中アイテム///
 var displayItems=new Array(4);
@@ -72,9 +71,9 @@ var displayItems=new Array(4);
 var nowSelect;
 
 /////宇宙人HP
-var alienHP=5;
+var alienHP=100;
 /////自分のHP
-var myHP=1;
+var myHP=100;
 
 
 ///////////アイテム４つ設定////////////
@@ -210,7 +209,7 @@ function disp(){
 
 ///////////宇宙人の攻撃
 function alienAttack(){
-	myHP--;
+	myHP=myHP-20;
 }
 
 ///////////ゲームオーバー
