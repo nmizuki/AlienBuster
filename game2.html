@@ -1,0 +1,28 @@
+<!-- Created with Ai->Canvas Export Plug-In Version 1.1 (Mac)   -->
+<!-- By Mike Swanson (http://blog.mikeswanson.com/)             -->
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <title>canvas</title>
+  <script>
+    function init() {
+      var canvas = document.getElementById("canvas");
+      var ctx = canvas.getContext("2d");
+      draw(ctx);
+    }
+    function draw(ctx) {
+      // 1/OzSNfYtif
+      ctx.save();
+      // 1/OzSNfYtif/Layer 0
+      ctx.save();
+      ctx.drawImage(document.getElementById("image1"), 0.0, 0.0);
+      ctx.restore();
+      ctx.restore();
+    }
+  </script>
+ </head>
+ <body onload="init()">
+   <canvas id="canvas" width="176" height="195"></canvas>
+   <img alt="Layer 0" id="image1" style="display: none" src="image1.png" />
+ </body>
+</html>
