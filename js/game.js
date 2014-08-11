@@ -149,9 +149,9 @@ function setItem(itemPlace){
 
 
 /////選択中アイテムは青色に/////////
-	// inputがクリックされた時の処理
-  function clickCard(id){
-		$(function(){
+// inputがクリックされた時の処理
+function clickCard(id){
+	$(function(){
 		// クリックされたオブジェクトのIdとClassを取得
 		var thisId = $("#"+id).attr("id");
 		var thisClass = $("#"+id).attr("class");
@@ -185,8 +185,7 @@ function setItem(itemPlace){
 
 			//canvas操作が終了したら
 			$("#game").mouseup(function(e){
-					mouseUpListner(thisId);
-					return;
+				mouseUpListner(thisId);
 			});
 
 		} else {
@@ -195,7 +194,7 @@ function setItem(itemPlace){
 			$("#"+id).removeClass("active");
 		}
 	});
-	};
+};
 
 //canvas上のマウスアップで操作終了とみなす（仮）
 function mouseUpListner(thisId) {

@@ -153,7 +153,8 @@ html, body {
 #wrapper #buttons {
   display: block;
   position: relative;
-  margin-top: 110px;
+  height: 100px;
+  margin-top: -20px;
 }
 #wrapper #buttons ul {
   position: absolute;
