@@ -171,9 +171,9 @@ function selectA(selectPlace){
 		//ret
 		return;
 	}
-	
-	
-	
+
+
+
 	//未選択のボタン
 	if(nowSelect==null){
 		nowSelect=selectPlace;
@@ -186,8 +186,9 @@ function selectA(selectPlace){
 		return;
 	}
 	var select=document.getElementById(selectPlace);
-	select.style.backgroundColor="blue";
-	
+	// select.style.backgroundColor="blue";
+	select.className = "active";
+
 	//hiddenに色を設定
 		var giveColor;
 		switch(nowSelect){
@@ -204,20 +205,20 @@ function selectA(selectPlace){
 				giveColor=displayItems[3];
 				break;
 		}
-		
+
 		var giveColor1=items[giveColor].color;
-		
+
 		var hiddenPlace=document.getElementById('hc');
 		hiddenPlace.value=giveColor1;
 
-	
+
 	//canvas操作が開始したら
 	canvas.addEventListener('mousedown', mouseDownListner, false);
 
 
 
 	//canvas操作が終了したら
-	canvas.addEventListener('mouseup', mouseUpListner, false);
+	canvas.addEventListener('touchend', mouseUpListner, false);
 }
 
 
@@ -227,16 +228,16 @@ function mouseDownListner(e) {
 	//1のみ選択
 	if(nowSelect!=null && nowSelect2==null){
 		//alert('1のみ！');
-		
+
 	}
 	//2のみ選択
 	else if(nowSelect==null && nowSelect2!=null){
-		//alert('2のみ！');		
+		//alert('2のみ！');
 	}
 	//両方選択
 	else if(nowSelect!=null && nowSelect2!=null){
 		//alert('両方！！');
-		
+
 	}
 
 }
@@ -250,7 +251,7 @@ function mouseUpListner(e) {
 	if(nowSelect2!=null){
 		var select2=document.getElementById(nowSelect2);
 	}
-	
+
 //	var select1=document.getElementById(nowSelect);
 //	console.log(nowSelect);
 
@@ -260,8 +261,8 @@ function mouseUpListner(e) {
 		var damageIndex;
 		var damageIndex2;
 		var damageValue;
-		
-	
+
+
 		//１だけ
 		if(nowSelect!=null && nowSelect2==null){
 				switch(nowSelect){
@@ -278,11 +279,11 @@ function mouseUpListner(e) {
 					damageIndex=displayItems[3];
 					break;
 				}
-			
+
 			damageValue=items[damageIndex].damage;
 
 		}
-		
+
 		//２だけ
 		else if(nowSelect==null && nowSelect2!=null){
 				switch(nowSelect2){
@@ -299,18 +300,22 @@ function mouseUpListner(e) {
 					damageIndex=displayItems[3];
 					break;
 				}
-			
+
 			damageValue=items[damageIndex].damage;
 
 		}
-		
+
 		//2つ選択
 		else if(nowSelect!=null && nowSelect2!=null){
-				
+
 			//組み合わせによるダメージ値の設定
 			damageValue=30;
 
 		}
+
+
+		// プレゼン用
+		damageValue = 20;
 
 		alert('ただいまの攻撃値:'+damageValue);
 		alienHP=alienHP-damageValue;
@@ -339,7 +344,7 @@ function mouseUpListner(e) {
 		setItem(nowSelect2);
 		nowSelect2=null;
 	}
-	
+
 	else if(nowSelect!=null && nowSelect2!=null){
 		//青色解除
 		//次のアイテム
@@ -347,19 +352,19 @@ function mouseUpListner(e) {
 		select1.style.backgroundColor="#ffb098";
 		setItem(nowSelect);
 		nowSelect=null;
-		
+
 		select2.style.backgroundColor="#ffb098";
 		setItem(nowSelect2);
 		nowSelect2=null;
 	}
-	
-	
-	
-		console.log(damageValue);
+
+
+
+		console.log(select1);
 
 
 	//次のアイテム
-	setItem(thisId);
+	setItem(select1);
 
 
 }

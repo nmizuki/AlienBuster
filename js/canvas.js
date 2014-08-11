@@ -32,7 +32,7 @@ $(function(){
   c.lineWidth = 7;
   c.lineJoin = "round";
   c.lineCap = "round";
-  
+
   $("#item").click(function(){
 
   // タップ開始時に、絵を描く準備をする
@@ -179,25 +179,25 @@ function draw(ctx) {
   // 1/
   ctx.save();
   ctx.beginPath();
-  ctx.moveTo(94.0, 142.4);
-  ctx.bezierCurveTo(91.4, 138.1, 85.3, 134.3, 78.2, 133.1);
-  ctx.bezierCurveTo(69.9, 131.6, 48.9, 129.0, 47.9, 139.0);
-  ctx.bezierCurveTo(47.6, 142.4, 57.5, 143.8, 49.1, 143.2);
-  ctx.bezierCurveTo(45.3, 142.9, 41.5, 147.1, 47.0, 150.6);
-  ctx.bezierCurveTo(47.3, 150.8, 41.2, 154.1, 51.8, 157.6);
-  ctx.bezierCurveTo(59.9, 160.3, 73.7, 161.9, 82.0, 159.0);
-  ctx.bezierCurveTo(89.4, 156.4, 98.6, 149.9, 94.0, 142.4);
+  ctx.moveTo(131.8, 199.6);
+  ctx.bezierCurveTo(128.2, 193.7, 119.5, 188.3, 109.7, 186.6);
+  ctx.bezierCurveTo(98.0, 184.6, 68.5, 180.9, 67.1, 194.9);
+  ctx.bezierCurveTo(66.7, 199.6, 80.6, 201.6, 68.8, 200.7);
+  ctx.bezierCurveTo(63.5, 200.3, 58.1, 206.2, 65.9, 211.2);
+  ctx.bezierCurveTo(66.3, 211.5, 57.7, 216.0, 72.6, 221.0);
+  ctx.bezierCurveTo(84.0, 224.8, 103.3, 227.0, 114.9, 222.9);
+  ctx.bezierCurveTo(125.3, 219.3, 138.2, 210.2, 131.8, 199.6);
   ctx.closePath();
   ctx.fillStyle = "rgb(167, 186, 56)";
   ctx.fill();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(60.3, 162.1);
-  ctx.lineTo(33.4, 162.1);
-  ctx.lineTo(33.4, 95.0);
-  ctx.lineTo(60.3, 95.0);
-  ctx.lineTo(60.3, 162.1);
+  ctx.moveTo(84.5, 227.3);
+  ctx.lineTo(46.8, 227.3);
+  ctx.lineTo(46.8, 133.2);
+  ctx.lineTo(84.5, 133.2);
+  ctx.lineTo(84.5, 227.3);
   ctx.closePath();
   ctx.fillStyle = "rgb(254, 254, 254)";
   ctx.fill();
@@ -206,355 +206,355 @@ function draw(ctx) {
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(60.4, 162.2);
-  ctx.lineTo(33.3, 162.2);
-  ctx.lineTo(33.3, 147.2);
-  ctx.lineTo(60.4, 147.2);
-  ctx.lineTo(60.4, 162.2);
+  ctx.moveTo(84.6, 227.3);
+  ctx.lineTo(46.7, 227.3);
+  ctx.lineTo(46.7, 206.4);
+  ctx.lineTo(84.6, 206.4);
+  ctx.lineTo(84.6, 227.3);
   ctx.closePath();
   ctx.fillStyle = "rgb(196, 69, 58)";
   ctx.fill();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(60.3, 147.2);
-  ctx.bezierCurveTo(60.3, 148.6, 54.3, 149.7, 46.8, 149.7);
-  ctx.bezierCurveTo(39.4, 149.7, 33.4, 148.6, 33.4, 147.2);
-  ctx.bezierCurveTo(33.4, 145.9, 39.4, 144.8, 46.8, 144.8);
-  ctx.bezierCurveTo(54.3, 144.8, 60.3, 145.9, 60.3, 147.2);
+  ctx.moveTo(84.5, 206.4);
+  ctx.bezierCurveTo(84.5, 208.3, 76.1, 209.9, 65.7, 209.9);
+  ctx.bezierCurveTo(55.2, 209.9, 46.8, 208.3, 46.8, 206.4);
+  ctx.bezierCurveTo(46.8, 204.5, 55.2, 203.0, 65.7, 203.0);
+  ctx.bezierCurveTo(76.1, 203.0, 84.5, 204.5, 84.5, 206.4);
   ctx.closePath();
   ctx.fillStyle = "rgb(254, 254, 254)";
   ctx.fill();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(208.9, 134.6);
-  ctx.bezierCurveTo(208.9, 167.4, 191.1, 194.0, 169.2, 194.0);
-  ctx.bezierCurveTo(147.2, 194.0, 129.4, 167.4, 129.4, 134.6);
-  ctx.bezierCurveTo(129.4, 101.8, 147.2, 75.2, 169.2, 75.2);
-  ctx.bezierCurveTo(191.1, 75.2, 208.9, 101.8, 208.9, 134.6);
+  ctx.moveTo(292.9, 188.7);
+  ctx.bezierCurveTo(292.9, 234.7, 268.0, 272.0, 237.2, 272.0);
+  ctx.bezierCurveTo(206.4, 272.0, 181.4, 234.7, 181.4, 188.7);
+  ctx.bezierCurveTo(181.4, 142.7, 206.4, 105.4, 237.2, 105.4);
+  ctx.bezierCurveTo(268.0, 105.4, 292.9, 142.7, 292.9, 188.7);
   ctx.closePath();
   ctx.fillStyle = "rgb(50, 79, 58)";
   ctx.fill();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(195.9, 140.4);
-  ctx.bezierCurveTo(195.9, 185.6, 168.6, 222.2, 135.0, 222.2);
-  ctx.bezierCurveTo(101.4, 222.2, 74.1, 185.6, 74.1, 140.4);
-  ctx.bezierCurveTo(74.1, 95.2, 101.4, 58.6, 135.0, 58.6);
-  ctx.bezierCurveTo(168.6, 58.6, 195.9, 95.2, 195.9, 140.4);
+  ctx.moveTo(274.6, 196.9);
+  ctx.bezierCurveTo(274.6, 260.2, 236.4, 311.6, 189.3, 311.6);
+  ctx.bezierCurveTo(142.1, 311.6, 103.9, 260.2, 103.9, 196.9);
+  ctx.bezierCurveTo(103.9, 133.5, 142.1, 82.2, 189.3, 82.2);
+  ctx.bezierCurveTo(236.4, 82.2, 274.6, 133.5, 274.6, 196.9);
   ctx.closePath();
   ctx.fillStyle = "rgb(188, 209, 64)";
   ctx.fill();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(133.9, 40.0);
-  ctx.bezierCurveTo(165.3, 40.0, 190.7, 65.5, 190.7, 96.8);
-  ctx.bezierCurveTo(190.7, 128.2, 165.3, 153.6, 133.9, 153.6);
-  ctx.bezierCurveTo(102.6, 153.6, 77.2, 128.2, 77.2, 96.8);
-  ctx.bezierCurveTo(77.2, 65.5, 102.6, 40.0, 133.9, 40.0);
+  ctx.moveTo(187.8, 56.2);
+  ctx.bezierCurveTo(231.8, 56.2, 267.4, 91.8, 267.4, 135.8);
+  ctx.bezierCurveTo(267.4, 179.7, 231.8, 215.4, 187.8, 215.4);
+  ctx.bezierCurveTo(143.8, 215.4, 108.2, 179.7, 108.2, 135.8);
+  ctx.bezierCurveTo(108.2, 91.8, 143.8, 56.2, 187.8, 56.2);
   ctx.closePath();
   ctx.fillStyle = "rgb(148, 166, 48)";
   ctx.fill();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(134.6, 30.9);
-  ctx.bezierCurveTo(166.7, 30.9, 192.7, 56.9, 192.7, 89.0);
-  ctx.bezierCurveTo(192.7, 121.1, 166.7, 147.1, 134.6, 147.1);
-  ctx.bezierCurveTo(102.6, 147.1, 76.6, 121.1, 76.6, 89.0);
-  ctx.bezierCurveTo(76.6, 56.9, 102.6, 30.9, 134.6, 30.9);
+  ctx.moveTo(188.7, 43.4);
+  ctx.bezierCurveTo(233.7, 43.4, 270.1, 79.8, 270.1, 124.8);
+  ctx.bezierCurveTo(270.1, 169.7, 233.7, 206.2, 188.7, 206.2);
+  ctx.bezierCurveTo(143.8, 206.2, 107.3, 169.7, 107.3, 124.8);
+  ctx.bezierCurveTo(107.3, 79.8, 143.8, 43.4, 188.7, 43.4);
   ctx.closePath();
   ctx.fillStyle = "rgb(188, 209, 64)";
   ctx.fill();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(124.3, 47.6);
-  ctx.bezierCurveTo(131.9, 47.1, 126.4, 38.0, 137.4, 38.9);
+  ctx.moveTo(174.2, 66.8);
+  ctx.bezierCurveTo(184.9, 66.0, 177.2, 53.3, 192.6, 54.6);
   ctx.lineWidth = 1.0;
   ctx.strokeStyle = "rgb(223, 5, 21)";
   ctx.stroke();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(123.1, 44.1);
-  ctx.bezierCurveTo(122.1, 45.0, 120.0, 45.7, 118.8, 46.0);
-  ctx.bezierCurveTo(118.4, 44.5, 116.9, 44.1, 116.3, 43.3);
+  ctx.moveTo(172.6, 61.8);
+  ctx.bezierCurveTo(171.2, 63.1, 168.3, 64.0, 166.5, 64.5);
+  ctx.bezierCurveTo(165.9, 62.4, 163.9, 61.9, 163.1, 60.7);
   ctx.stroke();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(140.6, 259.7);
-  ctx.bezierCurveTo(203.2, 259.7, 254.3, 254.5, 254.3, 248.3);
-  ctx.bezierCurveTo(254.3, 242.0, 203.2, 236.8, 140.6, 236.8);
-  ctx.bezierCurveTo(77.9, 236.8, 26.8, 242.0, 26.8, 248.3);
-  ctx.bezierCurveTo(26.8, 254.5, 77.9, 259.7, 140.6, 259.7);
+  ctx.moveTo(197.1, 364.1);
+  ctx.bezierCurveTo(284.9, 364.1, 356.6, 356.9, 356.6, 348.1);
+  ctx.bezierCurveTo(356.6, 339.2, 284.9, 332.1, 197.1, 332.1);
+  ctx.bezierCurveTo(109.2, 332.1, 37.6, 339.2, 37.6, 348.1);
+  ctx.bezierCurveTo(37.6, 356.9, 109.2, 364.1, 197.1, 364.1);
   ctx.closePath();
   ctx.fillStyle = "rgb(50, 79, 58)";
   ctx.fill();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(125.1, 30.9);
-  ctx.bezierCurveTo(146.8, 27.9, 166.6, 41.3, 169.3, 60.9);
-  ctx.bezierCurveTo(172.0, 80.5, 156.6, 98.7, 134.9, 101.7);
-  ctx.bezierCurveTo(113.2, 104.7, 93.4, 91.3, 90.7, 71.7);
-  ctx.bezierCurveTo(88.0, 52.1, 103.5, 33.8, 125.1, 30.9);
+  ctx.moveTo(175.4, 43.3);
+  ctx.bezierCurveTo(205.9, 39.1, 233.6, 57.9, 237.3, 85.4);
+  ctx.bezierCurveTo(241.1, 112.8, 219.5, 138.4, 189.1, 142.6);
+  ctx.bezierCurveTo(158.7, 146.8, 131.0, 127.9, 127.2, 100.5);
+  ctx.bezierCurveTo(123.4, 73.1, 145.0, 47.4, 175.4, 43.3);
   ctx.closePath();
   ctx.fillStyle = "rgb(121, 137, 36)";
   ctx.fill();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(128.1, 35.7);
-  ctx.bezierCurveTo(147.1, 33.1, 164.4, 44.9, 166.7, 62.0);
-  ctx.bezierCurveTo(169.1, 79.2, 155.6, 95.2, 136.6, 97.8);
-  ctx.bezierCurveTo(117.6, 100.4, 100.3, 88.6, 97.9, 71.5);
-  ctx.bezierCurveTo(95.5, 54.3, 109.0, 38.3, 128.1, 35.7);
+  ctx.moveTo(179.5, 50.0);
+  ctx.bezierCurveTo(206.2, 46.4, 230.5, 62.9, 233.8, 86.9);
+  ctx.bezierCurveTo(237.1, 111.0, 218.1, 133.4, 191.5, 137.1);
+  ctx.bezierCurveTo(164.9, 140.8, 140.6, 124.3, 137.3, 100.2);
+  ctx.bezierCurveTo(134.0, 76.2, 152.9, 53.7, 179.5, 50.0);
   ctx.closePath();
   ctx.fillStyle = "rgb(254, 254, 254)";
   ctx.fill();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(131.7, 54.8);
-  ctx.bezierCurveTo(142.3, 55.0, 150.8, 63.9, 150.6, 74.5);
-  ctx.bezierCurveTo(150.4, 85.2, 141.5, 93.6, 130.9, 93.4);
-  ctx.bezierCurveTo(120.2, 93.2, 111.7, 84.4, 112.0, 73.7);
-  ctx.bezierCurveTo(112.2, 63.1, 121.0, 54.6, 131.7, 54.8);
+  ctx.moveTo(184.6, 76.9);
+  ctx.bezierCurveTo(199.6, 77.2, 211.4, 89.5, 211.1, 104.5);
+  ctx.bezierCurveTo(210.8, 119.4, 198.4, 131.3, 183.5, 131.0);
+  ctx.bezierCurveTo(168.5, 130.7, 156.7, 118.3, 157.0, 103.4);
+  ctx.bezierCurveTo(157.3, 88.4, 169.7, 76.5, 184.6, 76.9);
   ctx.closePath();
   ctx.fillStyle = "rgb(4, 0, 0)";
   ctx.fill();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(124.2, 64.8);
-  ctx.bezierCurveTo(124.6, 62.4, 126.8, 60.7, 129.2, 61.1);
-  ctx.bezierCurveTo(131.7, 61.4, 133.3, 63.7, 133.0, 66.1);
-  ctx.bezierCurveTo(132.6, 68.5, 130.4, 70.2, 127.9, 69.8);
-  ctx.bezierCurveTo(125.5, 69.5, 123.8, 67.2, 124.2, 64.8);
+  ctx.moveTo(174.1, 90.8);
+  ctx.bezierCurveTo(174.6, 87.4, 177.8, 85.1, 181.2, 85.6);
+  ctx.bezierCurveTo(184.6, 86.1, 186.9, 89.3, 186.4, 92.7);
+  ctx.bezierCurveTo(185.9, 96.1, 182.8, 98.4, 179.4, 97.9);
+  ctx.bezierCurveTo(176.0, 97.4, 173.6, 94.2, 174.1, 90.8);
   ctx.closePath();
   ctx.fillStyle = "rgb(254, 254, 254)";
   ctx.fill();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(103.0, 198.7);
-  ctx.bezierCurveTo(98.6, 202.1, 95.4, 209.2, 95.4, 216.7);
-  ctx.bezierCurveTo(95.4, 225.6, 96.6, 247.9, 108.4, 247.1);
-  ctx.bezierCurveTo(112.3, 246.8, 111.9, 236.3, 112.9, 245.1);
-  ctx.bezierCurveTo(113.3, 249.0, 119.0, 252.3, 122.0, 245.9);
-  ctx.bezierCurveTo(122.1, 245.5, 127.1, 251.3, 129.1, 239.7);
-  ctx.bezierCurveTo(130.6, 230.8, 129.6, 216.2, 124.6, 208.2);
-  ctx.bezierCurveTo(120.1, 201.0, 110.8, 192.6, 103.0, 198.7);
+  ctx.moveTo(144.4, 278.6);
+  ctx.bezierCurveTo(138.2, 283.4, 133.8, 293.3, 133.8, 303.8);
+  ctx.bezierCurveTo(133.8, 316.4, 135.4, 347.5, 151.9, 346.4);
+  ctx.bezierCurveTo(157.4, 346.0, 157.0, 331.2, 158.3, 343.6);
+  ctx.bezierCurveTo(158.9, 349.2, 166.8, 353.7, 171.0, 344.7);
+  ctx.bezierCurveTo(171.2, 344.2, 178.2, 352.3, 180.9, 336.1);
+  ctx.bezierCurveTo(183.1, 323.5, 181.7, 303.2, 174.7, 291.9);
+  ctx.bezierCurveTo(168.4, 281.8, 155.3, 270.1, 144.4, 278.6);
   ctx.closePath();
   ctx.fillStyle = "rgb(188, 209, 64)";
   ctx.fill();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(156.8, 198.7);
-  ctx.bezierCurveTo(152.4, 202.1, 149.2, 209.2, 149.2, 216.7);
-  ctx.bezierCurveTo(149.2, 225.6, 150.4, 247.9, 162.2, 247.1);
-  ctx.bezierCurveTo(166.1, 246.8, 165.8, 236.3, 166.7, 245.1);
-  ctx.bezierCurveTo(167.1, 249.0, 172.8, 252.3, 175.8, 245.9);
-  ctx.bezierCurveTo(176.0, 245.5, 180.9, 251.3, 182.9, 239.7);
-  ctx.bezierCurveTo(184.4, 230.8, 183.4, 216.2, 178.4, 208.2);
-  ctx.bezierCurveTo(173.9, 201.0, 164.6, 192.6, 156.8, 198.7);
+  ctx.moveTo(219.8, 278.6);
+  ctx.bezierCurveTo(213.7, 283.4, 209.2, 293.3, 209.2, 303.8);
+  ctx.bezierCurveTo(209.2, 316.4, 210.9, 347.5, 227.4, 346.4);
+  ctx.bezierCurveTo(232.9, 346.0, 232.4, 331.2, 233.7, 343.6);
+  ctx.bezierCurveTo(234.3, 349.2, 242.3, 353.7, 246.5, 344.7);
+  ctx.bezierCurveTo(246.7, 344.2, 253.6, 352.3, 256.4, 336.1);
+  ctx.bezierCurveTo(258.5, 323.5, 257.2, 303.2, 250.1, 291.9);
+  ctx.bezierCurveTo(243.8, 281.8, 230.7, 270.1, 219.8, 278.6);
   ctx.closePath();
   ctx.fill();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(178.2, 151.6);
-  ctx.bezierCurveTo(181.2, 155.9, 187.8, 159.4, 195.1, 160.1);
-  ctx.bezierCurveTo(203.9, 160.8, 225.7, 161.7, 225.9, 150.8);
-  ctx.bezierCurveTo(226.0, 147.2, 215.6, 146.6, 224.3, 146.5);
-  ctx.bezierCurveTo(228.2, 146.4, 231.9, 141.5, 225.9, 138.2);
-  ctx.bezierCurveTo(225.5, 138.0, 231.6, 134.0, 220.4, 131.2);
-  ctx.bezierCurveTo(211.8, 129.0, 197.5, 128.6, 189.2, 132.5);
-  ctx.bezierCurveTo(181.8, 136.0, 172.8, 143.9, 178.2, 151.6);
+  ctx.moveTo(249.8, 212.5);
+  ctx.bezierCurveTo(254.0, 218.6, 263.3, 223.5, 273.6, 224.4);
+  ctx.bezierCurveTo(285.8, 225.5, 316.5, 226.7, 316.7, 211.4);
+  ctx.bezierCurveTo(316.8, 206.3, 302.3, 205.5, 314.5, 205.3);
+  ctx.bezierCurveTo(320.0, 205.3, 325.1, 198.4, 316.6, 193.8);
+  ctx.bezierCurveTo(316.2, 193.5, 324.7, 187.8, 309.0, 183.9);
+  ctx.bezierCurveTo(296.9, 180.9, 276.8, 180.3, 265.3, 185.8);
+  ctx.bezierCurveTo(254.9, 190.7, 242.3, 201.7, 249.8, 212.5);
   ctx.closePath();
   ctx.fillStyle = "rgb(167, 186, 56)";
   ctx.fill();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(125.5, 37.8);
-  ctx.bezierCurveTo(120.0, 44.6, 125.7, 48.9, 129.1, 55.6);
+  ctx.moveTo(176.0, 53.0);
+  ctx.bezierCurveTo(168.2, 62.6, 176.2, 68.6, 181.0, 78.0);
   ctx.stroke();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(102.8, 53.6);
-  ctx.bezierCurveTo(106.3, 57.5, 109.7, 59.7, 113.2, 63.1);
+  ctx.moveTo(144.2, 75.2);
+  ctx.bezierCurveTo(149.0, 80.6, 153.9, 83.7, 158.6, 88.5);
   ctx.stroke();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(100.5, 69.5);
-  ctx.bezierCurveTo(102.5, 61.2, 107.5, 73.3, 113.2, 69.5);
+  ctx.moveTo(140.8, 97.4);
+  ctx.bezierCurveTo(143.7, 85.9, 150.7, 102.8, 158.6, 97.4);
   ctx.stroke();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(113.2, 44.5);
-  ctx.bezierCurveTo(112.5, 46.5, 112.3, 49.3, 112.0, 51.5);
-  ctx.bezierCurveTo(117.7, 51.3, 119.0, 54.2, 119.9, 58.8);
+  ctx.moveTo(158.6, 62.4);
+  ctx.bezierCurveTo(157.7, 65.2, 157.4, 69.2, 157.1, 72.3);
+  ctx.bezierCurveTo(165.0, 71.9, 166.8, 76.0, 168.1, 82.4);
   ctx.stroke();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(140.9, 56.4);
-  ctx.bezierCurveTo(147.4, 54.3, 145.9, 53.4, 148.0, 50.5);
-  ctx.bezierCurveTo(149.3, 48.6, 146.3, 44.4, 152.2, 44.8);
-  ctx.bezierCurveTo(159.1, 45.3, 153.5, 52.9, 160.0, 53.6);
+  ctx.moveTo(197.6, 79.0);
+  ctx.bezierCurveTo(206.6, 76.2, 204.6, 74.9, 207.5, 70.8);
+  ctx.bezierCurveTo(209.3, 68.2, 205.1, 62.3, 213.4, 62.9);
+  ctx.bezierCurveTo(223.1, 63.5, 215.3, 74.2, 224.3, 75.2);
   ctx.stroke();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(150.5, 79.4);
-  ctx.bezierCurveTo(152.4, 77.3, 154.9, 76.1, 156.4, 77.8);
+  ctx.moveTo(211.0, 111.3);
+  ctx.bezierCurveTo(213.6, 108.3, 217.1, 106.7, 219.3, 109.1);
   ctx.stroke();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(149.7, 69.1);
-  ctx.bezierCurveTo(152.0, 69.4, 156.3, 71.0, 158.6, 69.9);
-  ctx.bezierCurveTo(162.5, 67.9, 157.1, 61.5, 166.0, 63.1);
+  ctx.moveTo(209.8, 96.9);
+  ctx.bezierCurveTo(213.2, 97.3, 219.2, 99.6, 222.3, 98.0);
+  ctx.bezierCurveTo(227.8, 95.3, 220.3, 86.3, 232.7, 88.5);
   ctx.stroke();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(146.5, 52.4);
-  ctx.bezierCurveTo(144.0, 51.3, 142.2, 49.2, 141.3, 47.3);
+  ctx.moveTo(205.4, 73.5);
+  ctx.bezierCurveTo(201.9, 71.9, 199.4, 69.0, 198.2, 66.2);
   ctx.stroke();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(148.9, 48.0);
-  ctx.bezierCurveTo(150.4, 50.9, 151.9, 53.6, 154.8, 54.4);
+  ctx.moveTo(208.7, 67.4);
+  ctx.bezierCurveTo(210.8, 71.3, 212.9, 75.1, 217.1, 76.3);
   ctx.stroke();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(147.7, 63.5);
-  ctx.bezierCurveTo(148.7, 61.7, 150.6, 61.1, 152.9, 61.5);
+  ctx.moveTo(207.1, 89.1);
+  ctx.bezierCurveTo(208.5, 86.5, 211.2, 85.7, 214.3, 86.3);
   ctx.stroke();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(111.6, 76.2);
-  ctx.bezierCurveTo(107.8, 75.3, 105.9, 76.0, 102.4, 73.8);
+  ctx.moveTo(156.4, 106.9);
+  ctx.bezierCurveTo(151.1, 105.5, 148.5, 106.6, 143.6, 103.5);
   ctx.stroke();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(106.0, 75.4);
-  ctx.bezierCurveTo(106.8, 78.1, 105.8, 79.9, 103.2, 80.6);
+  ctx.moveTo(148.6, 105.8);
+  ctx.bezierCurveTo(149.7, 109.5, 148.4, 112.0, 144.7, 113.0);
   ctx.stroke();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(60.3, 162.9);
-  ctx.bezierCurveTo(60.3, 164.2, 54.3, 165.3, 46.8, 165.3);
-  ctx.bezierCurveTo(39.4, 165.3, 33.4, 164.2, 33.4, 162.9);
-  ctx.bezierCurveTo(33.4, 161.5, 39.4, 160.4, 46.8, 160.4);
-  ctx.bezierCurveTo(54.3, 160.4, 60.3, 161.5, 60.3, 162.9);
+  ctx.moveTo(84.5, 228.4);
+  ctx.bezierCurveTo(84.5, 230.3, 76.1, 231.8, 65.7, 231.8);
+  ctx.bezierCurveTo(55.2, 231.8, 46.8, 230.3, 46.8, 228.4);
+  ctx.bezierCurveTo(46.8, 226.5, 55.2, 224.9, 65.7, 224.9);
+  ctx.bezierCurveTo(76.1, 224.9, 84.5, 226.5, 84.5, 228.4);
   ctx.closePath();
   ctx.fillStyle = "rgb(205, 207, 205)";
   ctx.fill();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(60.3, 161.2);
-  ctx.bezierCurveTo(60.3, 162.5, 54.3, 163.6, 46.8, 163.6);
-  ctx.bezierCurveTo(39.4, 163.6, 33.4, 162.5, 33.4, 161.2);
-  ctx.bezierCurveTo(33.4, 159.8, 39.4, 158.7, 46.8, 158.7);
-  ctx.bezierCurveTo(54.3, 158.7, 60.3, 159.8, 60.3, 161.2);
+  ctx.moveTo(84.5, 226.0);
+  ctx.bezierCurveTo(84.5, 227.9, 76.1, 229.4, 65.7, 229.4);
+  ctx.bezierCurveTo(55.2, 229.4, 46.8, 227.9, 46.8, 226.0);
+  ctx.bezierCurveTo(46.8, 224.1, 55.2, 222.5, 65.7, 222.5);
+  ctx.bezierCurveTo(76.1, 222.5, 84.5, 224.1, 84.5, 226.0);
   ctx.closePath();
   ctx.fillStyle = "rgb(196, 69, 58)";
   ctx.fill();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(60.3, 95.0);
-  ctx.bezierCurveTo(60.3, 95.7, 54.3, 96.2, 46.8, 96.2);
-  ctx.bezierCurveTo(39.4, 96.2, 33.4, 95.7, 33.4, 95.0);
-  ctx.bezierCurveTo(33.4, 94.3, 39.4, 93.8, 46.8, 93.8);
-  ctx.bezierCurveTo(54.3, 93.8, 60.3, 94.3, 60.3, 95.0);
+  ctx.moveTo(84.5, 133.2);
+  ctx.bezierCurveTo(84.5, 134.1, 76.1, 134.9, 65.7, 134.9);
+  ctx.bezierCurveTo(55.2, 134.9, 46.8, 134.1, 46.8, 133.2);
+  ctx.bezierCurveTo(46.8, 132.2, 55.2, 131.5, 65.7, 131.5);
+  ctx.bezierCurveTo(76.1, 131.5, 84.5, 132.2, 84.5, 133.2);
   ctx.closePath();
   ctx.fillStyle = "rgb(205, 207, 205)";
   ctx.fill();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(125.1, 47.6);
-  ctx.bezierCurveTo(125.3, 46.8, 125.6, 46.0, 125.5, 44.9);
-  ctx.bezierCurveTo(128.2, 44.7, 128.8, 43.3, 130.6, 41.7);
+  ctx.moveTo(175.3, 66.8);
+  ctx.bezierCurveTo(175.7, 65.6, 176.1, 64.4, 176.0, 63.0);
+  ctx.bezierCurveTo(179.7, 62.7, 180.6, 60.7, 183.1, 58.5);
   ctx.stroke();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(36.1, 90.3);
-  ctx.bezierCurveTo(38.5, 77.2, 30.5, 73.2, 21.0, 67.6);
-  ctx.bezierCurveTo(24.2, 66.5, 29.3, 66.5, 32.9, 66.1);
-  ctx.bezierCurveTo(30.5, 56.5, 21.8, 50.2, 18.2, 41.4);
-  ctx.bezierCurveTo(22.6, 41.8, 26.6, 42.6, 30.5, 44.2);
-  ctx.bezierCurveTo(32.1, 33.9, 30.1, 22.0, 24.6, 13.3);
-  ctx.bezierCurveTo(27.8, 17.2, 32.1, 21.2, 36.5, 24.0);
-  ctx.bezierCurveTo(40.5, 18.0, 43.6, 10.5, 43.6, 3.3);
-  ctx.bezierCurveTo(49.2, 21.2, 52.0, 18.4, 64.3, 11.3);
-  ctx.bezierCurveTo(62.7, 18.8, 56.3, 24.0, 56.7, 31.9);
-  ctx.bezierCurveTo(61.9, 29.1, 67.8, 28.3, 71.4, 33.5);
-  ctx.bezierCurveTo(60.3, 35.5, 52.0, 41.8, 48.4, 53.0);
-  ctx.bezierCurveTo(52.8, 50.2, 58.7, 49.0, 63.5, 51.0);
-  ctx.bezierCurveTo(56.7, 54.9, 49.6, 60.5, 47.2, 68.0);
-  ctx.bezierCurveTo(52.4, 68.4, 58.3, 67.6, 62.7, 69.6);
-  ctx.bezierCurveTo(50.4, 74.4, 49.6, 89.1, 36.5, 91.9);
+  ctx.moveTo(50.6, 126.6);
+  ctx.bezierCurveTo(53.9, 108.2, 42.8, 102.6, 29.4, 94.8);
+  ctx.bezierCurveTo(33.9, 93.2, 41.1, 93.2, 46.1, 92.6);
+  ctx.bezierCurveTo(42.8, 79.3, 30.6, 70.3, 25.6, 58.1);
+  ctx.bezierCurveTo(31.7, 58.7, 37.2, 59.8, 42.8, 62.0);
+  ctx.bezierCurveTo(45.0, 47.5, 42.2, 30.8, 34.5, 18.6);
+  ctx.bezierCurveTo(38.9, 24.2, 45.0, 29.7, 51.2, 33.6);
+  ctx.bezierCurveTo(56.7, 25.3, 61.2, 14.7, 61.2, 4.7);
+  ctx.bezierCurveTo(69.0, 29.7, 72.9, 25.8, 90.1, 15.8);
+  ctx.bezierCurveTo(87.9, 26.4, 79.0, 33.6, 79.5, 44.8);
+  ctx.bezierCurveTo(86.8, 40.9, 95.1, 39.7, 100.1, 47.0);
+  ctx.bezierCurveTo(84.5, 49.8, 72.9, 58.7, 67.8, 74.2);
+  ctx.bezierCurveTo(74.0, 70.3, 82.3, 68.7, 89.0, 71.5);
+  ctx.bezierCurveTo(79.5, 77.0, 69.5, 84.8, 66.2, 95.4);
+  ctx.bezierCurveTo(73.4, 95.9, 81.8, 94.8, 87.9, 97.6);
+  ctx.bezierCurveTo(70.6, 104.3, 69.5, 124.9, 51.2, 128.8);
   ctx.fillStyle = "rgb(244, 226, 76)";
   ctx.fill();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(4.3, 24.0);
-  ctx.bezierCurveTo(4.3, 29.1, 6.7, 33.1, 11.5, 33.9);
-  ctx.bezierCurveTo(13.1, 28.7, 10.3, 24.0, 4.7, 22.8);
+  ctx.moveTo(6.1, 33.6);
+  ctx.bezierCurveTo(6.1, 40.9, 9.4, 46.4, 16.1, 47.5);
+  ctx.bezierCurveTo(18.3, 40.3, 14.4, 33.6, 6.6, 32.0);
   ctx.fill();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(17.6, 3.1);
-  ctx.bezierCurveTo(20.1, 6.4, 20.9, 9.6, 25.8, 10.9);
-  ctx.bezierCurveTo(31.5, 3.1, 27.4, 3.1, 20.1, 0.6);
+  ctx.moveTo(24.7, 4.4);
+  ctx.bezierCurveTo(28.1, 8.9, 29.3, 13.4, 36.1, 15.3);
+  ctx.bezierCurveTo(44.1, 4.4, 38.4, 4.4, 28.1, 0.8);
   ctx.fill();
 
   // 1/
   ctx.beginPath();
-  ctx.moveTo(72.2, 0.5);
-  ctx.bezierCurveTo(68.4, 4.0, 67.1, 8.4, 69.7, 12.5);
-  ctx.bezierCurveTo(74.6, 10.2, 76.2, 4.9, 73.4, 0.0);
+  ctx.moveTo(101.2, 0.7);
+  ctx.bezierCurveTo(95.9, 5.6, 94.1, 11.8, 97.8, 17.5);
+  ctx.bezierCurveTo(104.6, 14.3, 106.9, 6.9, 102.8, 0.0);
   ctx.fill();
 
   // 1/
 
   // 1/KLabEnergyKLabEnergy
-  ctx.font = "R 4.6px '���˃S�V�b�N Pr6N'";
+  ctx.font = "R 6.4px '���˃S�V�b�N Pr6N'";
   ctx.fillStyle = "rgb(196, 69, 58)";
-  ctx.fillText("KLab", 33.9, 105.0);
-  ctx.fillText("Ener", 34.4, 113.0);
-  ctx.fillText("gy", 36.4, 121.0);
-  ctx.fillText("KLab", 33.9, 129.0);
-  ctx.fillText("Ener", 34.4, 137.0);
-  ctx.fillText("gy", 36.4, 145.0);
+  ctx.fillText("KLab", 52.5, 147.2);
+  ctx.fillText("Ener", 53.2, 158.5);
+  ctx.fillText("gy", 56.1, 169.7);
+  ctx.fillText("KLab", 52.5, 180.9);
+  ctx.fillText("Ener", 53.2, 192.1);
+  ctx.fillText("gy", 56.1, 203.3);
 
   // 1/KLab
-  ctx.font = "R 1.7px '���˃S�V�b�N Pr6N'";
+  ctx.font = "R 2.4px '���˃S�V�b�N Pr6N'";
   ctx.save();
-  ctx.transform(0.941, 0.000, 0.000, 1.000, 34.4, 159.6);
+  ctx.transform(0.941, 0.000, 0.000, 1.000, 53.3, 223.8);
   ctx.fillStyle = "rgb(254, 254, 254)";
   ctx.fillText("KLab", 0, 0);
   ctx.restore();
