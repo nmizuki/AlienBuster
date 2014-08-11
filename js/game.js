@@ -71,6 +71,7 @@ var displayItems=new Array(4);
 
 ////選択中ボタン
 var nowSelect;
+var nowSelect2;
 
 /////宇宙人HP
 var alienHP=100;
@@ -149,95 +150,217 @@ function setItem(itemPlace){
 
 
 /////選択中アイテムは青色に/////////
-// inputがクリックされた時の処理
-function clickCard(id){
-	$(function(){
-		// クリックされたオブジェクトのIdとClassを取得
-		var thisId = $("#"+id).attr("id");
-		var thisClass = $("#"+id).attr("class");
-		console.log(thisClass);
 
-		// クラスがあるかどうか
-		if(thisClass == undefined || thisClass == "click"){
-			// なかった場合
-			// Class active をセット
-			$("#"+id).addClass("active");
-			// あった場合は色をhiddenにセット
-			var giveColor;
-			switch(thisId){
-				case 'item1':
-					giveColor = displayItems[0];
-					break;
-				case 'item2':
-					giveColor = displayItems[1];
-					break;
-				case 'item3':
-					giveColor = displayItems[2];
-					break;
-				case 'item4':
-					giveColor = displayItems[3];
-					break;
-			}
-
-			var setColor = items[giveColor].color;
-			$("#hc").val(setColor);
-
-
-			//canvas操作が終了したら
-			$("#game").mouseup(function(e){
-				mouseUpListner(thisId);
-			});
-
-		} else {
-			// ある場合
-			// Class active を外す
-			$("#"+id).removeClass("active");
+function selectA(selectPlace){
+	//選択済み
+	if(selectPlace==nowSelect){
+		//選択解除
+		var select1=document.getElementById(nowSelect);
+		select1.style.backgroundColor="#ffb098";
+		nowSelect=null;
+		//alert('選択解除１');
+		//ret
+		return;
+	}
+	if(selectPlace==nowSelect2){
+		//選択解除
+		var select1=document.getElementById(nowSelect2);
+		select1.style.backgroundColor="#ffb098";
+		nowSelect2=null;
+		//alert('選択解除２');
+		//ret
+		return;
+	}
+	
+	
+	
+	//未選択のボタン
+	if(nowSelect==null){
+		nowSelect=selectPlace;
+		//alert('新たに1に登録');
+	}
+	else if(nowSelect2==null){
+		nowSelect2=selectPlace;
+	}
+	else{
+		return;
+	}
+	var select=document.getElementById(selectPlace);
+	select.style.backgroundColor="blue";
+	
+	//hiddenに色を設定
+		var giveColor;
+		switch(nowSelect){
+			case 'item1':
+				giveColor=displayItems[0];
+				break;
+			case 'item2':
+				giveColor=displayItems[1];
+				break;
+			case 'item3':
+				giveColor=displayItems[2];
+				break;
+			case 'item4':
+				giveColor=displayItems[3];
+				break;
 		}
-	});
-};
+		
+		var giveColor1=items[giveColor].color;
+		
+		var hiddenPlace=document.getElementById('hc');
+		hiddenPlace.value=giveColor1;
+
+	
+	//canvas操作が開始したら
+	canvas.addEventListener('mousedown', mouseDownListner, false);
+
+
+
+	//canvas操作が終了したら
+	canvas.addEventListener('mouseup', mouseUpListner, false);
+}
+
+
+//canvas上のマウスダウンで操作開始とみなす（仮）
+function mouseDownListner(e) {
+	//ここで描画？
+	//1のみ選択
+	if(nowSelect!=null && nowSelect2==null){
+		//alert('1のみ！');
+		
+	}
+	//2のみ選択
+	else if(nowSelect==null && nowSelect2!=null){
+		//alert('2のみ！');		
+	}
+	//両方選択
+	else if(nowSelect!=null && nowSelect2!=null){
+		//alert('両方！！');
+		
+	}
+
+}
 
 //canvas上のマウスアップで操作終了とみなす（仮）
-function mouseUpListner(thisId) {
+function mouseUpListner(e) {
+	if(nowSelect!=null){
+		var select1=document.getElementById(nowSelect);
+	}
+
+	if(nowSelect2!=null){
+		var select2=document.getElementById(nowSelect2);
+	}
+	
+//	var select1=document.getElementById(nowSelect);
+//	console.log(nowSelect);
+
 
 	//攻撃
 		//display配列の添字を取得
 		var damageIndex;
-		switch(thisId){
-			case 'item1':
-				damageIndex=displayItems[0];
-				break;
-			case 'item2':
-				damageIndex=displayItems[1];
-				break;
-			case 'item3':
-				damageIndex=displayItems[2];
-				break;
-			case 'item4':
-				damageIndex=displayItems[3];
-				break;
-		}
+		var damageIndex2;
+		var damageValue;
+		
+	
+		//１だけ
+		if(nowSelect!=null && nowSelect2==null){
+				switch(nowSelect){
+				case 'item1':
+					damageIndex=displayItems[0];
+					break;
+				case 'item2':
+					damageIndex=displayItems[1];
+					break;
+				case 'item3':
+					damageIndex=displayItems[2];
+					break;
+				case 'item4':
+					damageIndex=displayItems[3];
+					break;
+				}
+			
+			damageValue=items[damageIndex].damage;
 
-		var damageValue=items[damageIndex].damage;
-		ctx.font = "10pt Arial";
-		ctx.fillText(damageValue+'', 50, 50);
+		}
+		
+		//２だけ
+		else if(nowSelect==null && nowSelect2!=null){
+				switch(nowSelect2){
+				case 'item1':
+					damageIndex=displayItems[0];
+					break;
+				case 'item2':
+					damageIndex=displayItems[1];
+					break;
+				case 'item3':
+					damageIndex=displayItems[2];
+					break;
+				case 'item4':
+					damageIndex=displayItems[3];
+					break;
+				}
+			
+			damageValue=items[damageIndex].damage;
+
+		}
+		
+		//2つ選択
+		else if(nowSelect!=null && nowSelect2!=null){
+				
+			//組み合わせによるダメージ値の設定
+			damageValue=30;
+
+		}
 
 		alert('ただいまの攻撃値:'+damageValue);
 		alienHP=alienHP-damageValue;
 		var hp=document.getElementById('alienhpTag');
 		hp.value=alienHP;
-		if(alienHP==0){
+		if(alienHP<=0){
 			win();
 		}
 
+
+
+	if(nowSelect!=null && nowSelect2==null){
+		//青色解除
+		//次のアイテム
+		//選択中アイテムリセット
+		select1.style.backgroundColor="#ffb098";
+		setItem(nowSelect);
+		nowSelect=null;
+	}
+
+	else if(nowSelect==null && nowSelect2!=null){
+		//青色解除
+		//次のアイテム
+		//選択中アイテムリセット
+		select2.style.backgroundColor="#ffb098";
+		setItem(nowSelect2);
+		nowSelect2=null;
+	}
+	
+	else if(nowSelect!=null && nowSelect2!=null){
+		//青色解除
+		//次のアイテム
+		//選択中アイテムリセット
+		select1.style.backgroundColor="#ffb098";
+		setItem(nowSelect);
+		nowSelect=null;
+		
+		select2.style.backgroundColor="#ffb098";
+		setItem(nowSelect2);
+		nowSelect2=null;
+	}
+	
+	
+	
 		console.log(damageValue);
 
-	//選択解除
-	$(function(){
-  	$("#buttons ul li input").removeClass("active");
-	});
 
 	//次のアイテム
 	setItem(thisId);
+
 
 }
 
@@ -249,6 +372,9 @@ function disp(){
 
 	console.log(sec);
 	console.log('自分の残り体力'+myHP);
+	var timerOut=document.getElementById('timer');
+	timerOut.textContent=sec;
+
 
 	if(sec!=0){
 		sec--;
@@ -281,8 +407,8 @@ function alienAttack(){
 function gameover(){
 	ctx.font = "20pt Arial";
 	ctx.fillText("gameover", 50, 50);
-
-	window.location.reload();
+	setTimeout("end();",2000);
+	setTimeout("window.location.reload();", 5000);
 }
 
 
@@ -291,5 +417,11 @@ function gameover(){
 function win(){
 	ctx.font = "20pt Arial";
 	ctx.fillText("WIN!!!", 50, 50);
-	window.location.reload();
+	setTimeout("end();",2000);
+	setTimeout("window.location.reload();", 5000);
+}
+
+function end(){
+		ctx.font = "10pt Arial";
+	ctx.fillText("3秒後に新しいゲームが始まります。", 80, 80);
 }
