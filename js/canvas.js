@@ -32,6 +32,8 @@ $(function(){
   c.lineWidth = 7;
   c.lineJoin = "round";
   c.lineCap = "round";
+  
+  $("#item").click(function(){
 
   // タップ開始時に、絵を描く準備をする
   canvas.addEventListener("touchstart", function (event) {
@@ -86,6 +88,8 @@ $(function(){
   document.addEventListener("gesturestart", stopDefault, false);
   document.addEventListener("gesturechange", stopDefault, false);
   document.addEventListener("gestureend", stopDefault, false);
+
+});
 
 });
 
